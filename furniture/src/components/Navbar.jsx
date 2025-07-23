@@ -28,7 +28,7 @@ const Navbar = () => {
           <NavLink to="/bedframes" className={navLinkClass}>
             Bed Frames
           </NavLink>
-          <NavLink to="/boxsprings" className={navLinkClass}>
+          <NavLink to="/boxspring" className={navLinkClass}>
             Box Springs
           </NavLink>
         </div>
