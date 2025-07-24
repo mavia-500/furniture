@@ -4,6 +4,7 @@ import Mattress from "./pages/Mattress"
 import Bedframes from "./pages/Bedframes"
 import Boxspring from "./pages/Boxspring"
 import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/boxspring" element={<Boxspring/>}/>
 
       </Routes>
+      <Footer/>
     </>
   )
 }
