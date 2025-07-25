@@ -1,10 +1,22 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 const MattressCard = () => {
+
+  const location=useLocation();
+  
+useEffect(()=>{
+  const id=location.hash.replace("#","")
+  const element=document.getElementById(id)
+  if(element){
+    element.scrollIntoView({behavior:"smooth"})
+  }
+
+},[location])
   const mattressData = [
     {
-      category: "Foam mattress",
+      category: "Foam-Mattress",
       categoryDescription: `A simple foam mattress offers basic comfort and support using a
               single layer of foam, making it a budget-friendly and lightweight
               option for everyday use. On the other hand, a bamboo mattress
@@ -64,7 +76,7 @@ const MattressCard = () => {
     },
 
     {
-      category: "Eurotop Mattress",
+      category: "Eurotop-Mattress",
       categoryDescription: `A Euro‑top mattress is a type of pillow-top mattress where the cushioning layer is sewn flush with the edges and located beneath the fabric cover. Unlike traditional pillow-tops—which are visibly stitched on top and may have gaps—Euro-tops present a sleek, uniform appearance  
       Benefits of Euro‑Top Mattresses: Integrated Aesthetic & Feel ,Increased Durability,Stronger Edge Support,Excellent Motion Isolation,Luxurious Feel at a Reasonable Price
        `,
@@ -124,7 +136,7 @@ const MattressCard = () => {
     },
 
     {
-      category: "HD Double Sided Mattress",
+      category: "HD-Double-Sided-Mattress",
       categoryDescription: `A double-sided mattress is designed to be flipped and used on both sides, offering extended durability and more even wear over time. Each side typically has the same comfort layers, allowing you to rotate and flip the mattress regularly to maintain its shape and support. This type of mattress is a practical, long-lasting option for those looking to get the most value and lifespan from their purchase.
        `,
       details: [
@@ -144,7 +156,7 @@ const MattressCard = () => {
     },
 
     {
-      category: "Extra Firm(Hard) Mattress",
+      category: "Extra-Firm(Hard)-Mattress",
       categoryDescription: `An extra firm hard mattress offers the highest level of support with minimal sinkage, making it ideal for back and stomach sleepers or those with back pain. It keeps the spine properly aligned by preventing the body from sinking too deeply into the mattress. This type of mattress is especially suitable for people who prefer a very solid sleeping surface and need extra support for better posture and pressure relief.
        `,
       details: [
@@ -171,9 +183,10 @@ const MattressCard = () => {
   ];
 
   return (
-    <div id="foam-mattress">
+    <div >
       {mattressData.map((mattresData) => (
-        <div key={mattresData.category}>
+        <div key={mattresData.category} id={`${mattresData.category}`}>
+         
           <div  className="flex justify-center items-center  bg-gray-100 px-4">
             <div className="max-w-lg p-8 text-center border border-gray-200 hover:shadow-2xl transition-shadow duration-300">
               <h3 className="text-3xl font-bold text-gray-800 mb-4">
@@ -188,7 +201,7 @@ const MattressCard = () => {
           {/* //////////displaying card for categories */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-10">
             {mattresData.details.map((detail) => (
-              <div className="bg-gray-100 p-6 rounded-lg text-center hover:shadow-lg transition">
+              <div key={detail.name} className="bg-gray-100 p-6 rounded-lg text-center hover:shadow-lg transition">
                 <img
                   src="/public/bamboo7.webp"
                   alt="Foam Mattress"

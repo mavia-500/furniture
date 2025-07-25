@@ -4,74 +4,74 @@ import { Link } from "react-router-dom";
 const Main = () => {
   const categories = [
     {
-      categoryName: "Foam Mattress",
+      categoryName: "Foam mattress",
       categoryDescription:
         "Our premium foam range includes breathable Simple Foam for everyday support, naturally fresh Bamboo Foam for enhanced hygiene, and cooling Memory Gel Foam that adapts to your body for ultimate comfort.",
       imageUrl: "",
-      link: "/mattress#foam-mattress",
+      link: "/mattress#Foam-Mattress",
     },
     {
       categoryName: "Eurotop Mattress",
       categoryDescription:
         "Designed for superior back support, this mattress combines firm, high-density foam with a durable spring system to promote proper spinal alignment.It offers long-lasting support, reduced pressure points, and enhanced durability for a restful night’s sleep.",
       imageUrl: "",
-      link: "/mattress#eurotop-mattress",
+      link: "/mattress#Eurotop-Mattress",
     },
     {
-      categoryName: "Double Sided Mattress",
+      categoryName: "HD Double Sided Mattress",
       categoryDescription:
         "Designed for superior back support, this mattress combines firm, high-density foam with a durable spring system to promote proper spinal alignment.It offers long-lasting support, reduced pressure points, and enhanced durability for a restful night’s sleep.",
       imageUrl: "",
-      link: "/mattress#double-sided-mattress",
+      link: "/mattress#HD-Double-Sided-Mattress",
     },
     {
-      categoryName: "Extra Firm Hard Mattress",
+      categoryName: "Extra Firm(Hard) Mattress",
       categoryDescription:
         "Designed for superior back support, this mattress combines firm     high-density foam with a durable spring system to promote properspinal alignment.It offers long-lasting support, reduced pressurepoints, and enhanced durability for a restful night’s sleep.",
       imageUrl: "",
-      link: "/mattress#extra-firm-hard-mattress",
+      link: "/mattress#Extra-Firm(Hard)-Mattress",
     },
     {
       categoryName: "Storage Bed Frames",
       categoryDescription:
         "Storage bed frames are designed with built-in drawers orcompartments, offering a smart way to save space and keep your bedroom organized. They combine style and functionality, providing extra storage without taking up additional floor space.",
       imageUrl: "",
-      link: "/bedframes#storage-bedframes",
+      link: "/bedframes#Storage-Bed-Frames",
     },
     {
       categoryName: "Metal Bed Frames",
       categoryDescription:
         "Metal bed frames are strong, durable, and easy to maintain,offering reliable support for your mattress. With sleek, modern designs or classic styles, they suit any bedroom décor while providing a sturdy foundation that lasts for years.",
       imageUrl: "",
-      link: "/bedframes#metal-bedframes",
+      link: "/bedframes#Metal-Bed-Frames",
     },
     {
       categoryName: "Platform With Head Board",
       categoryDescription:
         "Platform bed frames feature a low-profile design with a solid or slatted base, eliminating the need for a box spring. They offer strong, even support for your mattress and add a modern, minimalist touch to any bedroom.",
       imageUrl: "",
-      link: "/bedframes#platform-bedframes",
+      link: "/bedframes#Plat-Form-Bed-Frame-With-Head-Board",
     },
     {
       categoryName: " Platform Without HeadBoard",
       categoryDescription:
         "A platform bed frame without a headboard offers a clean, minimalist look that’s perfect for modern spaces. Its sturdy base provides excellent mattress support and allows you the freedom to customize your bedroom décor to suit your style.",
       imageUrl: "",
-      link: "/bedframes#platform-without-headboard",
+      link: "/bedframes#Platform-Without-HeadBoard",
     },
     {
       categoryName: "Bunk Bed Frames",
       categoryDescription:
         "Bunk bed frames are a smart space-saving solution, featuring two  stacked beds—perfect for kids’ rooms or shared spaces. They combine functionality with fun, maximizing floor space while providing sturdy and safe sleeping arrangements.",
       imageUrl: "",
-      link: "/bedframes#bunkned",
+      link: "/bedframes#Bunk-Bed-Frames",
     },
     {
       categoryName: "Box Springs",
       categoryDescription:
         " A box spring is a supportive base made of a sturdy wooden or metal frame covered in fabric, often with springs or a metal grid inside. It sits under your mattress to provide extra support, absorb shock, and help extend the life of your mattress.",
       imageUrl: "",
-      link: "/boxspring#boxspring",
+      link: "/boxspring",
     },
   ];
   return (

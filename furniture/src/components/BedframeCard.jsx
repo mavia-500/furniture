@@ -1,9 +1,22 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
+
 
 const BedframeCard = () => {
+
+const location=useLocation();
+ useEffect(()=>{
+const id=location.hash.replace("#","")
+const element=document.getElementById(id)
+if(element){
+  element.scrollIntoView({behavior:"smooth"})
+
+}
+ },[location])
   const BedframesData = [
     {
-      category: "Storage Bed Frames",
+      category: "Storage-Bed-Frames",
       categoryDescription: `Storage bed frames are functional bed designs that come with built-in storage compartments, such as drawers, shelves, or lift-up platforms. They help maximize space by providing convenient storage for items like bedding, clothes, or personal belongings—perfect for smaller rooms or anyone looking to reduce clutter. Storage beds combine comfort and practicality, making them a smart solution for organized living.`,
       details: [
         {
@@ -144,7 +157,7 @@ const BedframeCard = () => {
     },
 
     {
-      category: "Metal Bed Frames",
+      category: "Metal-Bed-Frames",
       categoryDescription: `A metal bed frame is a durable and sturdy foundation designed to support a mattress and box spring or mattress alone. Typically made from steel or iron, metal frames are valued for their strength, longevity, and minimal maintenance. They come in various styles, from simple, minimalist designs to decorative options with headboards and footboards. Metal frames are often lightweight, easy to assemble, and provide excellent support without sagging. Many designs include under-bed storage space, making them practical for compact rooms. Their sleek appearance suits both modern and traditional bedroom décor.Do you want me to write this for a website product description (short and sales-focused) or detailed informational content?
            `,
       details: [
@@ -280,7 +293,7 @@ color_black: {
     },
 
     {
-      category: "Plate Form Bed Frame With Head Board",
+      category: "Plat-Form-Bed-Frame-With-Head-Board",
       categoryDescription: `A platform bed frame with a headboard combines style and functionality by offering a sturdy, low-profile base with an attached headboard for added comfort and aesthetics. Unlike traditional frames, it does not require a box spring, as the slatted or solid surface supports the mattress directly. The integrated headboard provides a comfortable backrest for reading or lounging and enhances the overall look of the bedroom. Platform frames with headboards come in various materials, including wood, metal, or upholstered designs, catering to modern and classic interiors alike.
            `,
       details: [
@@ -499,7 +512,7 @@ color_black: {
     },
 
     {
-      category: "Platform Without HeadBoard",
+      category: "Platform-Without-HeadBoard",
       categoryDescription: `A platform bed frame without a headboard offers a minimalist and versatile foundation for your mattress. It features a low-profile design with sturdy slats or a solid surface, eliminating the need for a box spring. This style is ideal for those who prefer a clean, modern look or wish to pair the frame with a separate headboard or wall décor. Its simple construction makes it lightweight, easy to assemble, and often provides ample under-bed storage space, making it a practical choice for small or multi-functional bedrooms.
            `,
       details: [
@@ -586,7 +599,7 @@ color_black: {
 
 
     {
-      category: "Bunk Bed Frames",
+      category: "Bunk-Bed-Frames",
       categoryDescription: `A bunk bed frame is a space-saving bed design that stacks two or more beds vertically, making it ideal for shared rooms, kids’ bedrooms, or dorms. Built with sturdy materials like metal or wood, bunk beds maximize floor space while providing comfortable sleeping arrangements for multiple people. Many designs include safety features such as guardrails and ladders, and some offer convertible options that can separate into individual beds. They are perfect for maximizing functionality in small spaces without compromising on comfort or style.
            `,
       details: [
@@ -689,10 +702,10 @@ color_black: {
     },
   ];
   return (
-    <div id="foam-mattress" className="mt-20">
+    <div  className="mt-20">
       {BedframesData.map((BedframesData) => (
         <>
-          <div className="flex justify-center items-center  bg-gray-100 px-4">
+          <div id= {`${BedframesData.category}`} className="flex justify-center items-center  bg-gray-100 px-4">
             <div className="max-w-lg p-8 text-center border border-gray-200 hover:shadow-2xl transition-shadow duration-300">
               <h3 className="text-3xl font-bold text-gray-800 mb-4">
                 {BedframesData.category}
@@ -706,7 +719,7 @@ color_black: {
           {/* //////////displaying card for categories */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-10">
             {BedframesData.details.map((detail) => (
-              <div className="bg-gray-100 p-6 rounded-lg text-center hover:shadow-lg transition">
+              <div  className="bg-gray-100 p-6 rounded-lg text-center hover:shadow-lg transition">
                 <img
                   src="bed.jpg"
                   alt="Foam Mattress"
