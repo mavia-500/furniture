@@ -1,8 +1,12 @@
 import React from 'react'
+import BoxSpring from '../components/BoxSpring'
 
 const Boxspring = () => {
+ 
   return (
-    <div>Boxspring</div>
+    <div>
+      <BoxSpring/>
+    </div>
   )
 }
 

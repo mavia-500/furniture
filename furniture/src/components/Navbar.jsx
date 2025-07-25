@@ -22,7 +22,7 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-6 text-gray-700 font-medium text-sm">
-          <NavLink to="/mattres" className={navLinkClass}>
+          <NavLink to="/mattress" className={navLinkClass}>
             Mattress
           </NavLink>
           <NavLink to="/bedframes" className={navLinkClass}>
@@ -47,7 +47,7 @@ const Navbar = () => {
         <div className="md:hidden  bg-white px-6 pb-4 space-y-6 text-gray-700 font-medium text-sm">
           <div>
             <NavLink
-              to="/mattres"
+              to="/mattress"
               className={navLinkClass}
               onClick={toggleMenu}
             >

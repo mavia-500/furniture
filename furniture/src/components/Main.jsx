@@ -46,7 +46,7 @@ const Main = () => {
       link: "/bedframes#metal-bedframes",
     },
     {
-      categoryName: "Platform Bed Frames",
+      categoryName: "Platform With Head Board",
       categoryDescription:
         "Platform bed frames feature a low-profile design with a solid or slatted base, eliminating the need for a box spring. They offer strong, even support for your mattress and add a modern, minimalist touch to any bedroom.",
       imageUrl: "",
