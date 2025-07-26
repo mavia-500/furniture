@@ -5,6 +5,7 @@ import Bedframes from "./pages/Bedframes"
 import Boxspring from "./pages/Boxspring"
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
+import MattressWholeDetails from "./components/MattressWholeDetails"
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/mattress" element={<Mattress/>}/>
+        <Route path="/mattress/:name" element={<MattressWholeDetails/>}/>
         <Route path="/bedframes" element={<Bedframes/>}/>
         <Route path="/boxspring" element={<Boxspring/>}/>
 

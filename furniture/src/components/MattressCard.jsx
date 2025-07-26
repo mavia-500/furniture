@@ -1,19 +1,17 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
 const MattressCard = () => {
+  const location = useLocation();
 
-  const location=useLocation();
-  
-useEffect(()=>{
-  const id=location.hash.replace("#","")
-  const element=document.getElementById(id)
-  if(element){
-    element.scrollIntoView({behavior:"smooth"})
-  }
-
-},[location])
+  useEffect(() => {
+    const id = location.hash.replace("#", "");
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [location]);
   const mattressData = [
     {
       category: "Foam-Mattress",
@@ -30,16 +28,21 @@ useEffect(()=>{
           name: "Regular Foam Mattress",
           description:
             "Flippable mattress 5 inches thickness. Made up of regular good quality foam. Closed corners for long last life. Packed in strong grip plastic bag",
-          threeInch: {
-            thickness: `3"`,
-            size_price: { size: "twin/single", price: 40 },
-          },
-          fiveInch: {
-            thickness: `5"`,
-            size_price_twin: { size: "twin/single", price: 60 },
-            size_price_double: { size: "double/full", price: 120 },
-            size_price_queen: { size: "queen", price: 135 },
-          },
+          innerDetails: [
+            {
+              thickness: `3"`,
+              size_price: [{ size: "twin/single",originalPrice:100, finalPrice: 40, }],
+            },
+
+            {
+              thickness: `5"`,
+              size_price: [
+                { size: "twin/single",originalPrice:110, finalPrice: 60 },
+                { size: "double/full",originalPrice:160, finalPrice: 120 },
+                { size: "queen",originalPrice:170, finalPrice: 135 },
+              ],
+            },
+          ],
         },
         {
           name: "Bamboo Foam Mattress",
@@ -143,7 +146,7 @@ useEffect(()=>{
         {
           name: "High Density Double Sided Mattress",
           description: ` Indulge in plush comfort without sacrificing support with the Luxora HD EuroTop Mattress, crafted to deliver hotel-style luxury right in your bedroom. Featuring a thick, high-density foam core and an extra layer of soft EuroTop padding, this mattress provides a beautifully balanced sleep surface—firm at the core for alignment, yet sumptuously soft at the top for comfort. The EuroTop layer is seamlessly stitched into the mattress, offering a cleaner, more upscale appearance than traditional pillow tops while eliminating the feeling of separation between layers. This design enhances body contouring and helps relieve pressure points, especially at the hips and shoulders, for deeper, uninterrupted sleep.The Luxora is built with durable HD foam that resists sagging, maintaining its shape and support for years. It’s wrapped in a breathable, knitted fabric cover that promotes airflow and regulates temperature, keeping you cool and comfortable through the night. Whether you’re a side, back, or combination sleeper, the Luxora HD EuroTop Mattress offers a perfect blend of support, softness, and sophistication—ideal for those who crave both orthopedic benefits and plush, cloud-like rest.  `,
-          
+
           tewelveInch: {
             thickness: `12"`,
             size_price_double: { size: "double/full", price: 365 },
@@ -151,7 +154,6 @@ useEffect(()=>{
             size_price_king: { size: "king", price: 475 },
           },
         },
-        
       ],
     },
 
@@ -177,17 +179,15 @@ useEffect(()=>{
             size_price_king: { size: "king", price: 585 },
           },
         },
-        
       ],
     },
   ];
 
   return (
-    <div >
+    <div>
       {mattressData.map((mattresData) => (
         <div key={mattresData.category} id={`${mattresData.category}`}>
-         
-          <div  className="flex justify-center items-center  bg-gray-100 px-4">
+          <div className="flex justify-center items-center  bg-gray-100 px-4">
             <div className="max-w-lg p-8 text-center border border-gray-200 hover:shadow-2xl transition-shadow duration-300">
               <h3 className="text-3xl font-bold text-gray-800 mb-4">
                 {mattresData.category}
@@ -201,21 +201,23 @@ useEffect(()=>{
           {/* //////////displaying card for categories */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-10">
             {mattresData.details.map((detail) => (
-              <div key={detail.name} className="bg-gray-100 p-6 rounded-lg text-center hover:shadow-lg transition">
-                <img
-                  src="/public/bamboo7.webp"
-                  alt="Foam Mattress"
-                  className="mx-auto mb-4"
-                />
-                <h3 className="font-bold text-lg mb-2">{detail.name}</h3>
-                <p className="text-gray-600 text-sm line-clamp-2">
-                  {detail.description}
-                </p>
+              <Link key={detail.name} to={`${detail.name}`} state={{ detail }}>
+                <div className="bg-gray-100 p-6 rounded-lg text-center hover:shadow-lg transition">
+                  <img
+                    src="/public/bamboo7.webp"
+                    alt="Foam Mattress"
+                    className="mx-auto mb-4"
+                  />
+                  <h3 className="font-bold text-lg mb-2">{detail.name}</h3>
+                  <p className="text-gray-600 text-sm line-clamp-2">
+                    {detail.description}
+                  </p>
 
-                <button className="mt-6 px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 hover:shadow-lg transition-all duration-300 ease-in-out">
-                  View
-                </button>
-              </div>
+                  <button className="mt-6 px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 hover:shadow-lg transition-all duration-300 ease-in-out">
+                    View
+                  </button>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
