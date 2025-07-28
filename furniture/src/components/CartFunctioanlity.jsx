@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 
 const CartFuntionality = ({ isOpen, onClose, cartItems }) => {
   // console.log(cartItems);
-  const [price, setPrice] = useState(0);
+  const [totalBill, setTotalBill] = useState(0);
   const [cartDetails, setCartDetails] = useState([]);
   console.log(cartDetails);
   useEffect(() => {
@@ -19,19 +19,21 @@ const CartFuntionality = ({ isOpen, onClose, cartItems }) => {
 
   const handleCounter = (index, type) => {
     setCartDetails((prev) =>
-      prev.map((item, i) =>
-        i === index
-          ? {
-              ...item,
-              quantity:
-                type === "increament"
-                  ? item.quantity + 1 
-                  : item.quantity > 1
-                  ? item.quantity - 1 
-                  : 1,
-            }
-          : item
-      )
+      prev.map((item, i) => {
+        if (index === i) {
+          const updatedItem = { ...item };
+
+          if (type === "increament" && item.quantity >= 1) {
+            updatedItem.quantity = updatedItem.quantity + 1;
+          } else if (type === "decrement" && item.quantity > 1) {
+            updatedItem.quantity = updatedItem.quantity - 1;
+          }
+          updatedItem.totalPrice = updatedItem.quantity * item.price;
+          console.log(updatedItem);
+          return updatedItem;
+        }
+        return item;
+      })
     );
   };
 
@@ -52,17 +54,17 @@ const CartFuntionality = ({ isOpen, onClose, cartItems }) => {
       }
     });
   };
-let finalPrice=0
-useEffect(()=>{
-  setPrice(()=>{
-    cartDetails.map((cartitem)=>{
-       return finalPrice=finalPrice+cartitem.price
-    })
-    return finalPrice
-  })
-},[cartDetails])
-  
-console.log(price)
+  let finalPrice = 0;
+  useEffect(() => {
+    setTotalBill(() => {
+      cartDetails.map((cartitem) => {
+        return (finalPrice = finalPrice + cartitem.totalPrice);
+      });
+      return finalPrice;
+    });
+  }, [cartDetails]);
+
+  // console.log(price)
   return (
     // Overlay Background
     <div
@@ -133,23 +135,31 @@ console.log(price)
                   </div>
                   <p className="text-4xl mt-5 text-gray-600">
                     {" "}
-                    <b>${item.quantity * item.price}</b>{" "}
+                    <b>${item.totalPrice}</b>{" "}
                   </p>
                 </div>
               </div>
             ))
           )}
         </div>
-        <div>
-          <p className="text-white">final price:{price}</p>
-        </div>
+
+        {totalBill && (
+          <div className="mt-5 bg-gradient-to-r from-purple-600 to-indigo-600 p-4 rounded-2xl shadow-lg flex justify-between items-center">
+            <p className="text-white text-lg font-semibold">
+              Total Bill Including Taxes:
+            </p>
+            <span className="mt-9 text-yellow-300 text-2xl font-bold">
+              ${totalBill}
+            </span>
+          </div>
+        )}
 
         {/* Checkout Button */}
-        {/* {cartItems.length > 0 && ( */}
-        <button className="w-full mt-5 bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">
-          Checkout
-        </button>
-        {/* // )} */}
+        {cartDetails.length > 0 && (
+          <button className="w-full mt-5 bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">
+            Checkout
+          </button>
+        )}
       </div>
     </div>
   );

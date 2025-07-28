@@ -176,7 +176,8 @@ const MattressWholeDetails = () => {
                 thickness: thickness,
                 size: size,
                 price: price,
-                quantity:counter
+                quantity:counter,
+                totalPrice:price
                 
               } }
               quantity={counter}
