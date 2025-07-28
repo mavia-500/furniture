@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
+import { FaShare } from "react-icons/fa";
+import CartFuntionality from "./CartFunctioanlity";
 
 const MattressWholeDetails = () => {
   const location = useLocation();
@@ -11,10 +13,10 @@ const MattressWholeDetails = () => {
   const [originalPrice, setOriginalPrice] = useState();
   const [size, setSize] = useState();
   const [counter, setCounter] = useState(1);
+  const [cartOpen, setCartOPen] = useState(false);
 
   const handleThicknessChange = (e) => {
     setThickness(e.target.value);
-    // console.log(e.target.value);
   };
 
   const handleSizeChange = (e) => {
@@ -89,7 +91,10 @@ const MattressWholeDetails = () => {
 
           {/* Size Selector */}
           <div className="mb-4 mt-5">
-          <p>Mattress thickness means how thick or high the mattress is or how big or tall a mattress looks from the side</p>
+            <p>
+              Mattress thickness means how thick or high the mattress is or how
+              big or tall a mattress looks from the side
+            </p>
             <p className="text-gray-700 mb-2 font-medium mt-2">Thickness</p>
 
             <select
@@ -108,7 +113,11 @@ const MattressWholeDetails = () => {
 
           {/* /////thickness */}
           <div className="mb-4 mt-5">
-            <p>The size of a mattress means how long and wide it is. Please see the picture below to understand the mattress size instructions clearly</p>
+            <p>
+              The size of a mattress means how long and wide it is. Please see
+              the picture below to understand the mattress size instructions
+              clearly
+            </p>
             <p className="text-gray-700 mb-2 font-medium">Size</p>
             <select
               onChange={handleSizeChange}
@@ -152,9 +161,28 @@ const MattressWholeDetails = () => {
           </div>
 
           {/* Add to Cart Button */}
-          <button className="w-full bg-blue-600 text-white py-3 rounded-xl hover:bg-blue-700 transition font-semibold">
+          <button
+            className="w-full bg-blue-600 text-white py-3 rounded-xl hover:bg-blue-700 transition font-semibold"
+            onClick={() => setCartOPen(true)}
+          >
             Add to Cart
           </button>
+          {cartOpen && (
+            <CartFuntionality
+              isOpen={cartOpen}
+              onClose={() => setCartOPen(false)}
+              cartItems={{
+                name: details.name,
+                thickness: thickness,
+                size: size,
+                price: price,
+                quantity:counter
+                
+              } }
+              quantity={counter}
+            />
+          )}
+
           {/* ////payment  */}
 
           <div className="flex justify-between mt-4">
@@ -164,9 +192,10 @@ const MattressWholeDetails = () => {
           </div>
           {/* Share Option */}
           <div className="flex justify-between mt-4">
-            <p className="text-gray-500">
-              Share: <span>logo</span>
-            </p>
+            <div className="flex items-center text-gray-500">
+              <span className="mr-1">Share:</span>
+              <FaShare className="ml-3" />
+            </div>
           </div>
 
           {/* Description */}
@@ -177,7 +206,10 @@ const MattressWholeDetails = () => {
 
           <div className="mt-6">
             <h2 className="text-lg font-semibold mb-2">Shipping in Canada</h2>
-            <p className="text-gray-600 text-sm">Shipping charges will range from $20 to $50 depending on your location. Delivery usually takes 1 to 3 business days.</p>
+            <p className="text-gray-600 text-sm">
+              Shipping charges will range from $20 to $50 depending on your
+              location. Delivery usually takes 1 to 3 business days.
+            </p>
           </div>
 
           {/* Size Chart */}

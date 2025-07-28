@@ -31,6 +31,10 @@ const Navbar = () => {
           <NavLink to="/boxspring" className={navLinkClass}>
             Box Springs
           </NavLink>
+
+          <NavLink to="/cart" className={navLinkClass}>
+            View Cart
+          </NavLink>
         </div>
 
         {/* Hamburger Icon */}
@@ -72,6 +76,16 @@ const Navbar = () => {
               onClick={toggleMenu}
             >
               Box Springs
+            </NavLink>
+          </div>
+
+          <div>
+            <NavLink
+              to="/cart"
+              className={navLinkClass}
+              onClick={toggleMenu}
+            >
+              View Cart
             </NavLink>
           </div>
         </div>
