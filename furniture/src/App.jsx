@@ -7,6 +7,9 @@ import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 import MattressWholeDetails from "./components/MattressWholeDetails"
 import Cart from "./pages/Cart"
+import CheckOut from "./pages/CheckOut"
+import BedWholeDetails from "./components/BedWholeDetails"
+import BoxWholeDetails from "./components/BoxWholeDetails"
 
 
 function App() {
@@ -20,8 +23,11 @@ function App() {
         <Route path="/mattress" element={<Mattress/>}/>
         <Route path="/mattress/:name" element={<MattressWholeDetails/>}/>
         <Route path="/bedframes" element={<Bedframes/>}/>
+        <Route path="/bedframes/:name" element={<BedWholeDetails/>}/>
         <Route path="/boxspring" element={<Boxspring/>}/>
-        {/* <Route path="/cart" element={<Cart/>}/> */}
+        <Route path="/boxspring/:name" element={<BoxWholeDetails/>}/>
+        <Route path="/checkout" element={<CheckOut/>}/>
+        <Route path="/cart" element={<Cart/>}/>
 
       </Routes>
       <Footer/>

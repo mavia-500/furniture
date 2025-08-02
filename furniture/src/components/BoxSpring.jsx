@@ -1,31 +1,36 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
 const BoxSpring = () => {
+  const boxspring = [
+    {
+      category: "Box Spring",
+      description:
+        "A box spring is a supportive foundation placed beneath a mattress to provide extra height, stability, and shock absorption. It consists of a wooden or metal frame filled with springs or a solid core and is covered with fabric. Box springs help extend the life of the mattress by absorbing impact and ensuring even weight distribution. They are commonly used with traditional bed frames and are ideal for sleepers who prefer a higher bed profile and added support.",
 
-    const boxspring=[
+      details: [
         {
-            category :"Box Spring",
-            description:"A box spring is a supportive foundation placed beneath a mattress to provide extra height, stability, and shock absorption. It consists of a wooden or metal frame filled with springs or a solid core and is covered with fabric. Box springs help extend the life of the mattress by absorbing impact and ensuring even weight distribution. They are commonly used with traditional bed frames and are ideal for sleepers who prefer a higher bed profile and added support.",
-
-            details:[
-                {
-                    name:"Simple Box Spring",
-                    description:`Extra Support – Provides a sturdy, even base for the mattress, reducing sagging and improving durability.Increased Mattress Height – Raises the bed for easier access and a more traditional look.Shock Absorption – Absorbs movement and pressure, enhancing comfort and protecting the mattress.Improved Airflow – Elevates the mattress for better ventilation, helping keep it fresh.Cost-Effective – A simple box spring is budget-friendly and works well with most standard bed frames.`,
-                    size_price:[{size:"single/twin",price:80},{size:"double",price:100},{size:"queen",price:115}]
-                },
-                {
-                    name:"Split Box Spring",
-                    description:`Easier to Move and Transport – The split design comes in two pieces, making it simple to navigate through doorways, staircases, and tight spaces.Same Support as Standard Box Spring – Offers the same stability and mattress support as a single-piece box spring.Ideal for Larger Beds – Perfect for king or queen sizes where a full box spring may be too bulky to handle.Flexible Setup – Each half can be positioned separately for easier installation on bed frames.Durability – Reduces strain on the frame during movement, helping maintain structural integrity over time.`,
-                    size_price:[{size:"queen-split",price:150},{size:"king-split",price:160}]
-                }
-
-            ]
+          name: "Simple Box Spring",
+          description: `Extra Support – Provides a sturdy, even base for the mattress, reducing sagging and improving durability.Increased Mattress Height – Raises the bed for easier access and a more traditional look.Shock Absorption – Absorbs movement and pressure, enhancing comfort and protecting the mattress.Improved Airflow – Elevates the mattress for better ventilation, helping keep it fresh.Cost-Effective – A simple box spring is budget-friendly and works well with most standard bed frames.`,
+          size_price: [
+            { size: "single/twin", price: 80 },
+            { size: "double", price: 100 },
+            { size: "queen", price: 115 },
+          ],
         },
-    ]
+        {
+          name: "Split Box Spring",
+          description: `Easier to Move and Transport – The split design comes in two pieces, making it simple to navigate through doorways, staircases, and tight spaces.Same Support as Standard Box Spring – Offers the same stability and mattress support as a single-piece box spring.Ideal for Larger Beds – Perfect for king or queen sizes where a full box spring may be too bulky to handle.Flexible Setup – Each half can be positioned separately for easier installation on bed frames.Durability – Reduces strain on the frame during movement, helping maintain structural integrity over time.`,
+          size_price: [
+            { size: "queen-split", price: 150 },
+            { size: "king-split", price: 160 },
+          ],
+        },
+      ],
+    },
+  ];
   return (
-    
-
-<div id="foam-mattress" className="mt-20">
+    <div id="foam-mattress" className="mt-20">
       {boxspring.map((boxspring) => (
         <>
           <div className="flex justify-center items-center  bg-gray-100 px-4">
@@ -41,29 +46,30 @@ const BoxSpring = () => {
 
           {/* //////////displaying card for categories */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-10">
-            {boxspring.details.map((detail) => (
-              <div className="bg-gray-100 p-6 rounded-lg text-center hover:shadow-lg transition">
-                <img
-                  src="bed.jpg"
-                  alt="Foam Mattress"
-                  className="mx-auto mb-4"
-                />
-                <h3 className="font-bold text-lg mb-2">{detail.name}</h3>
-                <p className="text-gray-600 text-sm line-clamp-2">
-                  {detail.description}
-                </p>
+            {boxspring.details.map((detail,index) => (
+              <Link to={`${detail.name}` } key={index} state={{detail}}>
+                <div className="bg-gray-100 p-6 rounded-lg text-center hover:shadow-lg transition">
+                  <img
+                    src="bed.jpg"
+                    alt="Foam Mattress"
+                    className="mx-auto mb-4"
+                  />
+                  <h3 className="font-bold text-lg mb-2">{detail.name}</h3>
+                  <p className="text-gray-600 text-sm line-clamp-2">
+                    {detail.description}
+                  </p>
 
-                <button className="mt-6 px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 hover:shadow-lg transition-all duration-300 ease-in-out">
-                  View
-                </button>
-              </div>
+                  <button className="mt-6 px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 hover:shadow-lg transition-all duration-300 ease-in-out">
+                    View
+                  </button>
+                </div>
+              </Link>
             ))}
           </div>
         </>
       ))}
     </div>
-    
-  )
-}
+  );
+};
 
-export default BoxSpring
+export default BoxSpring;

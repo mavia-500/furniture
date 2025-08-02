@@ -1,18 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { RiDeleteBin6Line } from "react-icons/ri";
+import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const CartFuntionality = ({ isOpen, onClose, cartItems }) => {
   // console.log(cartItems);
   const [totalBill, setTotalBill] = useState(0);
   const [cartDetails, setCartDetails] = useState([]);
-  console.log(cartDetails);
+  const navigate = useNavigate();
+  
   useEffect(() => {
     const savedCart = JSON.parse(localStorage.getItem("cartDetails")) || [];
 
     setCartDetails(() => [...savedCart, cartItems]);
   }, [cartItems]);
-
+  console.log(cartDetails);
   useEffect(() => {
     localStorage.setItem("cartDetails", JSON.stringify(cartDetails));
   }, [cartDetails]);
@@ -64,20 +66,16 @@ const CartFuntionality = ({ isOpen, onClose, cartItems }) => {
     });
   }, [cartDetails]);
 
-  // console.log(price)
+  const hanldeCheckout = () => {
+    navigate("/checkout");
+  };
+
   return (
     // Overlay Background
-    <div
-      className={`fixed inset-0 bg-black bg-opacity-30 transition-opacity duration-300 ${
-        isOpen
-          ? "opacity-100 pointer-events-auto"
-          : "opacity-0 pointer-events-none"
-      }`}
-      onClick={onClose}
-    >
+    <div>
       {/* Sidebar */}
       <div
-        className={`fixed top-0 right-0 w-80 h-full bg-black shadow-lg p-5 transition-transform duration-300 overflow-y-auto ${
+        className={`fixed top-0 right-0 w-100 h-full bg-black shadow-lg p-5 transition-transform duration-300 overflow-y-auto ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
         onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
@@ -92,7 +90,10 @@ const CartFuntionality = ({ isOpen, onClose, cartItems }) => {
         {/* Cart Items */}
         <div className="space-y-4">
           {cartDetails.length === 0 ? (
-            <p className="text-gray-500 text-center">Cart is empty</p>
+            <p className="text-gray-500 text-center">
+              Cart is empty No Item In the Cart Kindly Add item into the cart to
+              complete the Purchase
+            </p>
           ) : (
             cartDetails.map((item, index) => (
               <div
@@ -113,7 +114,7 @@ const CartFuntionality = ({ isOpen, onClose, cartItems }) => {
                     </button>
                   </div>
                   <p className="text-sm ">{item.size}</p>
-                  <p className="text-sm">Thickness: {item.thickness}</p>
+                  <p className="text-sm"> {item.thickness}</p>
                   <div className="space-x-5  flex mt-5">
                     <button
                       onClick={() => handleCounter(index, "increament")}
@@ -156,7 +157,10 @@ const CartFuntionality = ({ isOpen, onClose, cartItems }) => {
 
         {/* Checkout Button */}
         {cartDetails.length > 0 && (
-          <button className="w-full mt-5 bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">
+          <button
+            onClick={hanldeCheckout}
+            className=" w-full mt-5 bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition"
+          >
             Checkout
           </button>
         )}

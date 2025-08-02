@@ -4,7 +4,7 @@ import { FaShare } from "react-icons/fa";
 import CartFuntionality from "./CartFunctioanlity";
 import Swal from "sweetalert2";
 
-const MattressWholeDetails = () => {
+const BoxWholeDetails = () => {
   const location = useLocation();
   const details = location.state.detail; // Example: { title, price, discount, image, description }
   console.log(details);
@@ -16,24 +16,17 @@ const MattressWholeDetails = () => {
   const [counter, setCounter] = useState(1);
   const [cartOpen, setCartOPen] = useState(false);
 
-  const handleThicknessChange = (e) => {
-    setThickness(e.target.value);
-  };
-
   const handleSizeChange = (e) => {
     const sizeData = e.target.value;
     setSize(sizeData);
     if (sizeData) {
-      const thicknessData = details.innerDetails.find(
-        (item) => item.thickness === thickness
+      const priceData = details.size_price.find(
+        (item) => item.size === sizeData
       );
 
-      if (thicknessData) {
-        const priceData = thicknessData.size_price.find(
-          (item) => item.size === sizeData
-        );
-        setPrice(priceData.finalPrice);
-        setOriginalPrice(priceData.originalPrice);
+      if (priceData) {
+        setPrice(priceData.price);
+        setOriginalPrice(priceData.price + 50);
       }
     }
   };
@@ -49,25 +42,28 @@ const MattressWholeDetails = () => {
     });
   };
 
-  const handleCart = () => {
-    if (!size || !thickness) {
-      Swal.fire({
-        title: "To Proceed to Add to Cart",
-        text: "Please Select the Size and Thickness first",
-        icon: "warning",
-        // showCancelButton: true,
-        confirmButtonColor: "#3085d6",
-        // cancelButtonColor: "#d33",
-        confirmButtonText: "OK",
-      });
-      return;
-    } else {
-      setCartOPen(true);
-    }
-  };
+   const handleCart=()=>{
+    const disa="disable"
+      if(!size ){
+        Swal.fire({
+              title: "To Proceed to Add to Cart",
+              text: "Please Select the Size ",
+              icon: "warning",
+              // showCancelButton: true,
+              confirmButtonColor: "#3085d6",
+              // cancelButtonColor: "#d33",
+              confirmButtonText: "OK",
+            })
+            return;
+      }
+  else{
+    setCartOPen(true)
+  
+  }
+       }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 py-16 px-6">
+    <div className={`min-h-screen flex items-center justify-center bg-gray-50 py-16 px-6 `}>
       <div className="max-w-5xl w-full bg-white rounded-2xl shadow-lg grid md:grid-cols-2 overflow-hidden">
         {/* Image Section */}
         <div className="bg-gray-100 flex justify-center  p-6">
@@ -100,43 +96,13 @@ const MattressWholeDetails = () => {
               </p>
             </div>
           ) : (
-            <p className="text-gray-600 text-lg mb-4 mt-6">
-              <span className="text-green-600 font-semibold text-2xl">
-                Please Select the Thickness and size to get the quote
-              </span>
+            <p className="text-green-600 text-lg mb-4 mt-6">
+              please select the size to get the quote
             </p>
           )}
 
-          {/* Size Selector */}
-         
-          <div className="mb-4 mt-5">
-            <p>
-              Mattress thickness means how thick or high the mattress is or how
-              big or tall a mattress looks from the side
-            </p>
-            <p className="text-gray-700 mb-2 font-medium mt-2">Thickness</p>
-
-            <select
-              onChange={handleThicknessChange}
-              value={thickness}
-              className={`border w-40 px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none ${cartOpen ? "pointer-events-none opacity-50" : ""}`}
-            >
-              <option value="">Selcet thickness</option>
-              {details.innerDetails.map((thickness, index) => (
-                <option key={index} value={thickness.thickness}>
-                  {thickness.thickness}
-                </option>
-              ))}
-            </select>
-          </div>
-
           {/* /////thickness */}
           <div className="mb-4 mt-5">
-            <p>
-              The size of a mattress means how long and wide it is. Please see
-              the picture below to understand the mattress size instructions
-              clearly
-            </p>
             <p className="text-gray-700 mb-2 font-medium">Size</p>
             <select
               onChange={handleSizeChange}
@@ -144,13 +110,11 @@ const MattressWholeDetails = () => {
               className={`border w-40 px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none ${cartOpen ? "pointer-events-none opacity-50" : ""}`}
             >
               <option value="">Select size</option>
-              {details.innerDetails
-                .find((item) => item.thickness === thickness)
-                ?.size_price.map((size_price, index) => (
-                  <option key={index} value={size_price.size}>
-                    {size_price.size}
-                  </option>
-                ))}
+              {details.size_price.map((size_price, index) => (
+                <option key={index} value={size_price.size}>
+                  {size_price.size}
+                </option>
+              ))}
             </select>
           </div>
 
@@ -162,17 +126,17 @@ const MattressWholeDetails = () => {
           {/* Quantity & Counter */}
           <div className="mb-4">
             <p className="text-gray-700 mb-2 font-medium">Quantity</p>
-            <div className={`flex items-center space-x-3 ${cartOpen ? "pointer-events-none opacity-50" : ""}`}>
+            <div className="flex items-center space-x-3">
               <button
                 onClick={() => handleCounter("decrement")}
-                className="px-3 py-1 border rounded-lg bg-gray-100 hover:bg-gray-200"
+                className={`px-3 py-1 border rounded-lg bg-gray-100 hover:bg-gray-200 ${cartOpen ? "pointer-events-none opacity-50" : ""}`}
               >
                 -
               </button>
               <span>{counter}</span>
               <button
                 onClick={() => handleCounter("increament")}
-                className="px-3 py-1 border rounded-lg bg-gray-100 hover:bg-gray-200"
+                className={`px-3 py-1 border rounded-lg bg-gray-100 hover:bg-gray-200 ${cartOpen ? "pointer-events-none opacity-50" : ""}`}
               >
                 +
               </button>
@@ -192,7 +156,6 @@ const MattressWholeDetails = () => {
               onClose={() => setCartOPen(false)}
               cartItems={{
                 name: details.name,
-                thickness: thickness,
                 size: size,
                 price: price,
                 quantity: counter,
@@ -231,18 +194,11 @@ const MattressWholeDetails = () => {
           </div>
 
           {/* Size Chart */}
-          <div className="mt-6">
-            <h2 className="text-lg font-semibold mb-2">Mattress Size Chart</h2>
-            <img
-              src="/twinsize.png"
-              alt="Size Chart"
-              className="rounded-lg border"
-            />
-          </div>
+          
         </div>
       </div>
     </div>
   );
 };
 
-export default MattressWholeDetails;
+export default BoxWholeDetails;
