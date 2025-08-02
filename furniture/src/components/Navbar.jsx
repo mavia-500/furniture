@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
-
+import CartFuntionality from "./CartFunctioanlity";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
+  const [cartOpen, setCartOPen] = useState(false);
 
   const navLinkClass = ({ isActive }) =>
     isActive
@@ -13,7 +14,7 @@ const Navbar = () => {
       : "hover:text-blue-600 transition duration-200";
 
   return (
-    <div className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+    <div className="fixed top-0 left-0 w-full bg-white shadow-md z-50" >
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="text-2xl font-bold text-gray-800">
@@ -31,10 +32,14 @@ const Navbar = () => {
           <NavLink to="/boxspring" className={navLinkClass}>
             Box Springs
           </NavLink>
-
-          <NavLink to="/cart" className={navLinkClass}>
-            View Cart
-          </NavLink>
+          <button onClick={() => setCartOPen(true)}>View Cart</button>
+          {cartOpen && (
+            <CartFuntionality
+              isOpen={cartOpen}
+              onClose={() => setCartOPen(false)}
+              cartItems={{}}
+            />
+          )}
         </div>
 
         {/* Hamburger Icon */}
@@ -80,13 +85,12 @@ const Navbar = () => {
           </div>
 
           <div>
-            <NavLink
-              to="/cart"
-              className={navLinkClass}
-              onClick={toggleMenu}
-            >
-              View Cart
-            </NavLink>
+            <button onClick={() => setCartOPen(true)}>View Cart</button>
+            <CartFuntionality
+              isOpen={cartOpen}
+              onClose={() => setCartOPen(false)}
+              // cartItems={undefined}
+            />
           </div>
         </div>
       )}

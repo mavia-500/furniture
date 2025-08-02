@@ -27,7 +27,7 @@ function App() {
         <Route path="/boxspring" element={<Boxspring/>}/>
         <Route path="/boxspring/:name" element={<BoxWholeDetails/>}/>
         <Route path="/checkout" element={<CheckOut/>}/>
-        <Route path="/cart" element={<Cart/>}/>
+        {/* <Route path="/cart" element={<Cart/>}/> */}
 
       </Routes>
       <Footer/>

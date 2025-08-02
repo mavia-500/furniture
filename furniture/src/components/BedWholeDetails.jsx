@@ -50,24 +50,22 @@ const BedWholeDetails = () => {
     });
   };
 
-  const handleCart=()=>{
-    if(!size || !color){
+  const handleCart = () => {
+    if (!size || !color) {
       Swal.fire({
-            title: "To Proceed to Add to Cart",
-            text: "Please Select the Size and Color",
-            icon: "warning",
-            // showCancelButton: true,
-            confirmButtonColor: "#3085d6",
-            // cancelButtonColor: "#d33",
-            confirmButtonText: "OK",
-          })
-          return;
+        title: "To Proceed to Add to Cart",
+        text: "Please Select the Size and Color",
+        icon: "warning",
+        // showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        // cancelButtonColor: "#d33",
+        confirmButtonText: "OK",
+      });
+      return;
+    } else {
+      setCartOPen(true);
     }
-else{
-  setCartOPen(true)
-
-}
-     }
+  };
 
   return (
     <>
@@ -120,7 +118,9 @@ else{
               <select
                 onChange={handleThicknessChange}
                 value={color}
-                className={`border w-full sm:w-40 px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none rounded-md ${cartOpen ? "pointer-events-none opacity-50" : ""}`}
+                className={`border w-full sm:w-40 px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none rounded-md ${
+                  cartOpen ? "pointer-events-none opacity-50" : ""
+                }`}
               >
                 <option value="">Select Colour</option>
                 {details.innerDetails.map((color, index) => (
@@ -142,7 +142,9 @@ else{
               <select
                 onChange={handleSizeChange}
                 value={size}
-                className={`border w-full sm:w-40 px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none rounded-md ${cartOpen ? "pointer-events-none opacity-50" : ""}`}
+                className={`border w-full sm:w-40 px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none rounded-md ${
+                  cartOpen ? "pointer-events-none opacity-50" : ""
+                }`}
               >
                 <option value="">Select size</option>
                 {details.innerDetails
@@ -166,14 +168,18 @@ else{
               <div className="flex items-center space-x-3">
                 <button
                   onClick={() => handleCounter("decrement")}
-                  className={`px-3 py-1 border rounded-lg bg-gray-100 hover:bg-gray-200 ${cartOpen ? "pointer-events-none opacity-50" : ""}`}
+                  className={`px-3 py-1 border rounded-lg bg-gray-100 hover:bg-gray-200 ${
+                    cartOpen ? "pointer-events-none opacity-50" : ""
+                  }`}
                 >
                   -
                 </button>
                 <span>{counter}</span>
                 <button
                   onClick={() => handleCounter("increament")}
-                  className={`px-3 py-1 border rounded-lg bg-gray-100 hover:bg-gray-200 ${cartOpen ? "pointer-events-none opacity-50" : ""}`}
+                  className={`px-3 py-1 border rounded-lg bg-gray-100 hover:bg-gray-200 ${
+                    cartOpen ? "pointer-events-none opacity-50" : ""
+                  }`}
                 >
                   +
                 </button>
@@ -182,31 +188,30 @@ else{
 
             {/* Add to Cart Button */}
             <button
-              className={`w-full bg-blue-600 text-white py-3 rounded-xl hover:bg-blue-700 transition font-semibold ${cartOpen ? "pointer-events-none opacity-50" : ""}`}
+              className={`w-full bg-blue-600 text-white py-3 rounded-xl hover:bg-blue-700 transition font-semibold ${
+                cartOpen ? "pointer-events-none opacity-50" : ""
+              }`}
               onClick={handleCart}
             >
               Add to Cart
             </button>
 
-            {cartOpen &&
-               (
-                <div>
-                  <CartFuntionality
-                    isOpen={cartOpen}
-                    onClose={() => setCartOPen(false)}
-                    cartItems={{
-                      name: details.name,
-                      thickness: color, // Using color instead of undefined thickness
-                      size: size,
-                      price: price,
-                      quantity: counter,
-                      totalPrice: price,
-                    }}
-                  />
-                </div>
-              ) 
-                
-              }
+            {cartOpen && (
+              <div>
+                <CartFuntionality
+                  isOpen={cartOpen}
+                  onClose={() => setCartOPen(false)}
+                  cartItems={{
+                    name: details.name,
+                    thickness: color, // Using color instead of undefined thickness
+                    size: size,
+                    price: price,
+                    quantity: counter,
+                    totalPrice: price,
+                  }}
+                />
+              </div>
+            )}
 
             {/* Payment */}
             <div className="mt-4">
@@ -318,7 +323,13 @@ else{
         </div>
       </div>
       <div className="flex items-center justify-center">
-        Download assembly instruction {details.assembly_instruction}
+        <a
+          href="/T2125AI_0124.pdf"
+          download
+          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+        >
+          Download Assembly INstruction
+        </a>
       </div>
     </>
   );

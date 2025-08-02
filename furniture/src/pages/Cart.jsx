@@ -6,13 +6,13 @@ import { useState } from "react";
 const Cart = () => {
   const [cartOpen, setCartOPen] = useState(true);
   return (
-    <div className="mt-20">
-      <CartFuntionality
-        isOpen={cartOpen}
-        onClose={() => setCartOPen(false)}
-        cartItems={{}}
-      />
-    </div>
+    <div className="">
+    <CartFuntionality
+      isOpen={cartOpen}
+      onClose={() => setCartOPen(false)}
+      cartItems={{}}
+    />
+  </div>
   );
 };
 

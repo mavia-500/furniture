@@ -8,12 +8,14 @@ const CartFuntionality = ({ isOpen, onClose, cartItems }) => {
   const [totalBill, setTotalBill] = useState(0);
   const [cartDetails, setCartDetails] = useState([]);
   const navigate = useNavigate();
-  
+  console.log(cartItems);
   useEffect(() => {
     const savedCart = JSON.parse(localStorage.getItem("cartDetails")) || [];
 
-    setCartDetails(() => [...savedCart, cartItems]);
-  }, [cartItems]);
+    setCartDetails(() =>
+      Object.keys(cartItems).length > 0 ? [...savedCart, cartItems] : savedCart
+    );
+  }, []);
   console.log(cartDetails);
   useEffect(() => {
     localStorage.setItem("cartDetails", JSON.stringify(cartDetails));
@@ -60,7 +62,7 @@ const CartFuntionality = ({ isOpen, onClose, cartItems }) => {
   useEffect(() => {
     setTotalBill(() => {
       cartDetails.map((cartitem) => {
-        return (finalPrice = finalPrice + cartitem.totalPrice);
+        return (finalPrice = finalPrice + cartitem.price*cartitem.quantity);
       });
       return finalPrice;
     });
@@ -72,7 +74,7 @@ const CartFuntionality = ({ isOpen, onClose, cartItems }) => {
 
   return (
     // Overlay Background
-    <div>
+    <div className="fixed inset-0 bg-opacity-50" onClick={onClose}>
       {/* Sidebar */}
       <div
         className={`fixed top-0 right-0 w-100 h-full bg-black shadow-lg p-5 transition-transform duration-300 overflow-y-auto ${
@@ -136,7 +138,7 @@ const CartFuntionality = ({ isOpen, onClose, cartItems }) => {
                   </div>
                   <p className="text-4xl mt-5 text-gray-600">
                     {" "}
-                    <b>${item.totalPrice}</b>{" "}
+                    <b>${item.price * item.quantity}</b>{" "}
                   </p>
                 </div>
               </div>

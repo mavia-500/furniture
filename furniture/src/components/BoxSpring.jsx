@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import ImageSlider from "./ImageSlider";
 const BoxSpring = () => {
   const boxspring = [
     {
@@ -17,6 +17,11 @@ const BoxSpring = () => {
             { size: "double", price: 100 },
             { size: "queen", price: 115 },
           ],
+          image: [
+            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754132969/box_spring_jdmftx.webp",
+            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754132969/box_springn_1_l9rbbr.webp",
+            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754133312/WhatsApp_Image_2025-08-02_at_4.14.30_PM_efp3si.jpg",
+          ],
         },
         {
           name: "Split Box Spring",
@@ -24,6 +29,10 @@ const BoxSpring = () => {
           size_price: [
             { size: "queen-split", price: 150 },
             { size: "king-split", price: 160 },
+          ],
+          image: [
+            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754135491/split_box_spring_a_tj1vem.webp",
+            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754135603/split_box_yh9z0b.jpg",
           ],
         },
       ],
@@ -46,24 +55,22 @@ const BoxSpring = () => {
 
           {/* //////////displaying card for categories */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-10">
-            {boxspring.details.map((detail,index) => (
-              <Link to={`${detail.name}` } key={index} state={{detail}}>
-                <div className="bg-gray-100 p-6 rounded-lg text-center hover:shadow-lg transition">
-                  <img
-                    src="bed.jpg"
-                    alt="Foam Mattress"
-                    className="mx-auto mb-4"
-                  />
-                  <h3 className="font-bold text-lg mb-2">{detail.name}</h3>
-                  <p className="text-gray-600 text-sm line-clamp-2">
-                    {detail.description}
-                  </p>
+            {boxspring.details.map((detail, index) => (
+              
+              <div className="bg-gray-100 p-6 rounded-lg text-center hover:shadow-lg transition">
+                <ImageSlider images={detail.image} />
+                 <Link to={`${detail.name}` } key={index} state={{detail}}>
+                <h3 className="font-bold text-lg mb-2">{detail.name}</h3>
+                <p className="text-gray-600 text-sm line-clamp-2">
+                  {detail.description}
+                </p>
 
-                  <button className="mt-6 px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 hover:shadow-lg transition-all duration-300 ease-in-out">
-                    View
-                  </button>
-                </div>
-              </Link>
+                <button className="mt-6 px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 hover:shadow-lg transition-all duration-300 ease-in-out">
+                  View
+                </button>
+                </Link>
+              </div>
+              
             ))}
           </div>
         </>

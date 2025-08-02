@@ -9,7 +9,7 @@ const BoxWholeDetails = () => {
   const details = location.state.detail; // Example: { title, price, discount, image, description }
   console.log(details);
 
-  const [thickness, setThickness] = useState("");
+  // const [thickness, setThickness] = useState("");
   const [price, setPrice] = useState();
   const [originalPrice, setOriginalPrice] = useState();
   const [size, setSize] = useState();

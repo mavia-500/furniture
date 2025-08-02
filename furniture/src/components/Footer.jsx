@@ -3,7 +3,7 @@ import { FaFacebook, FaInstagram, FaYoutube,FaTiktok  } from 'react-icons/fa';
 import { FaSquareThreads } from "react-icons/fa6";
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white px-6 py-10 mt-10 mb-15">
+    <footer className="bg-gray-900 text-white px-6 py-10 mt-10 ">
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
         
         {/* Brand/Logo */}
