@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import { FaShare } from "react-icons/fa";
 import CartFuntionality from "./CartFunctioanlity";
 import Swal from "sweetalert2";
+import ImageSlider from "./ImageSlider";
 // import CartFuntionality from "./CartFuntionality";
 
 const BedWholeDetails = () => {
@@ -67,17 +68,14 @@ const BedWholeDetails = () => {
     }
   };
 
+  const rendering=1
   return (
     <>
       <div className="min-h-screen mt-10 flex items-center justify-center bg-gray-50 py-6 px-4 sm:px-6 lg:px-8">
         <div className="w-full max-w-7xl bg-white rounded-2xl shadow-lg flex flex-col md:flex-row overflow-hidden">
           {/* Image Section */}
           <div className="bg-gray-100  justify-center p-4 sm:p-6 w-full md:w-1/2">
-            <img
-              className="w-full max-w-md h-auto object-contain rounded-lg"
-              src="/public/bamboo7.webp"
-              alt="Mattress"
-            />
+            <ImageSlider images={details.image} rendering={rendering}/>
           </div>
 
           {/* Details Section */}

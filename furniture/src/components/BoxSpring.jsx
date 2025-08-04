@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ImageSlider from "./ImageSlider";
 const BoxSpring = () => {
+  const rendering=0
   const boxspring = [
     {
       category: "Box Spring",
@@ -40,8 +41,8 @@ const BoxSpring = () => {
   ];
   return (
     <div id="foam-mattress" className="mt-20">
-      {boxspring.map((boxspring) => (
-        <>
+      {boxspring.map((boxspring,index) => (
+        <div key={index}>
           <div className="flex justify-center items-center  bg-gray-100 px-4">
             <div className="max-w-lg p-8 text-center border border-gray-200 hover:shadow-2xl transition-shadow duration-300">
               <h3 className="text-3xl font-bold text-gray-800 mb-4">
@@ -58,7 +59,7 @@ const BoxSpring = () => {
             {boxspring.details.map((detail, index) => (
               
               <div className="bg-gray-100 p-6 rounded-lg text-center hover:shadow-lg transition">
-                <ImageSlider images={detail.image} />
+                <ImageSlider images={detail.image} rendering={rendering} />
                  <Link to={`${detail.name}` } key={index} state={{detail}}>
                 <h3 className="font-bold text-lg mb-2">{detail.name}</h3>
                 <p className="text-gray-600 text-sm line-clamp-2">
@@ -73,7 +74,7 @@ const BoxSpring = () => {
               
             ))}
           </div>
-        </>
+        </div>
       ))}
     </div>
   );

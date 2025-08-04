@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import { FaShare } from "react-icons/fa";
 import CartFuntionality from "./CartFunctioanlity";
 import Swal from "sweetalert2";
+import ImageSlider from "./ImageSlider";
 
 const BoxWholeDetails = () => {
   const location = useLocation();
@@ -62,16 +63,13 @@ const BoxWholeDetails = () => {
   }
        }
 
+       const rendering=1
   return (
     <div className={`min-h-screen flex items-center justify-center bg-gray-50 py-16 px-6 `}>
       <div className="max-w-5xl w-full bg-white rounded-2xl shadow-lg grid md:grid-cols-2 overflow-hidden">
         {/* Image Section */}
         <div className="bg-gray-100 flex justify-center  p-6">
-          <img
-            className="h-80 w-auto object-contain rounded-lg"
-            src="/public/bamboo7.webp"
-            alt="Mattress"
-          />
+          <ImageSlider images={details.image} rendering={rendering}/>
         </div>
 
         {/* Details Section */}

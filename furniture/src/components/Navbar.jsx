@@ -1,20 +1,25 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
-import CartFuntionality from "./CartFunctioanlity";
+import CartFunctionality from "./CartFunctioanlity"; // Fix typo in import name
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [cartOpen, setCartOpen] = useState(false); // Fix typo in variable name
 
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const [cartOpen, setCartOPen] = useState(false);
+  const toggleMenu = (e) => {
+    e.stopPropagation(); // Prevent event bubbling
+    console.log("Toggle menu called"); // Debug log
+    setIsOpen(!isOpen);
+  };
 
   const navLinkClass = ({ isActive }) =>
     isActive
-      ? "text-blue-600 border-b-2 border-blue-600 pb-1 "
+      ? "text-blue-600 border-b-2 border-blue-600 pb-1"
       : "hover:text-blue-600 transition duration-200";
 
   return (
-    <div className="fixed top-0 left-0 w-full bg-white shadow-md z-50" >
+    <div className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="text-2xl font-bold text-gray-800">
@@ -32,14 +37,7 @@ const Navbar = () => {
           <NavLink to="/boxspring" className={navLinkClass}>
             Box Springs
           </NavLink>
-          <button onClick={() => setCartOPen(true)}>View Cart</button>
-          {cartOpen && (
-            <CartFuntionality
-              isOpen={cartOpen}
-              onClose={() => setCartOPen(false)}
-              cartItems={{}}
-            />
-          )}
+          <button onClick={() => setCartOpen(true)}>View Cart</button>
         </div>
 
         {/* Hamburger Icon */}
@@ -53,7 +51,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden  bg-white px-6 pb-4 space-y-6 text-gray-700 font-medium text-sm">
+        <div className="md:hidden bg-white px-6 pb-4 space-y-6 text-gray-700 font-medium text-sm">
           <div>
             <NavLink
               to="/mattress"
@@ -63,9 +61,7 @@ const Navbar = () => {
               Mattress
             </NavLink>
           </div>
-
           <div>
-            {" "}
             <NavLink
               to="/bedframes"
               className={navLinkClass}
@@ -76,23 +72,26 @@ const Navbar = () => {
           </div>
           <div>
             <NavLink
-              to="/boxsprings"
+              to="/boxspring"
               className={navLinkClass}
               onClick={toggleMenu}
             >
               Box Springs
             </NavLink>
           </div>
-
           <div>
-            <button onClick={() => setCartOPen(true)}>View Cart</button>
-            <CartFuntionality
-              isOpen={cartOpen}
-              onClose={() => setCartOPen(false)}
-              // cartItems={undefined}
-            />
+            <button onClick={() => setCartOpen(true)}>View Cart</button>
           </div>
         </div>
+      )}
+
+      {/* Render CartFunctionality only when cartOpen is true */}
+      {cartOpen && (
+        <CartFunctionality
+          isOpen={cartOpen}
+          onClose={() => setCartOpen(false)}
+          cartItems={{}}
+        />
       )}
     </div>
   );

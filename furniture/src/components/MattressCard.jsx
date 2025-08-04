@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
-
+import ImageSlider from "./ImageSlider.jsx"
 const MattressCard = () => {
   const location = useLocation();
 
@@ -13,6 +13,7 @@ const MattressCard = () => {
     }
   }, [location]);
 
+  const rendering=0;
   
   const mattressData = [
     {
@@ -30,6 +31,7 @@ const MattressCard = () => {
           name: "Regular Foam Mattress",
           description:
             "Flippable mattress 5 inches thickness. Made up of regular good quality foam. Closed corners for long last life. Packed in strong grip plastic bag",
+            image:["https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754293231/F3-1_unszt9.png","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754293229/F2-1_oyxpnz.png","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754293229/5inch_view2_231110_bivlfd.webp","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754293229/2_80a80fa0-2fbc-46a9-93ce-00235317758f_k4naak.webp"],
           innerDetails: [
             {
               thickness: `3"`,
@@ -52,6 +54,7 @@ const MattressCard = () => {
           name: "Bamboo Foam Mattress",
           description:
             "Completely springless design. High quality foam covered with stretchable organic fabric. Comfort Level: Medium",
+            image:["https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754293467/IMG_5895_lcrxvk.webp","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754293468/bamboo7_mattress_view2_230709_3_1_lhjawt.webp","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754293467/bamboo-7_-mattress_view1_230709_3-1-scaled_h2rh8j.webp","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754293472/K1_j8y9uz.png"],
           innerDetails: [
             {
               thickness: `7"`,
@@ -75,6 +78,7 @@ const MattressCard = () => {
       - 10-Year Warranty: Peace of mind for a decade.
       - Fiberglass-Free: Safe sleeping environment.
       - Free Shipping in Canada: Dispatch next day, delivery in 1-5 days.`,
+      image:["https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754292563/Job12_240309_view5_240321_zjsrko.webp","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754292563/Job12_240309_view3_240310_1_t78wl6.webp","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754292563/Job12_240309_view2_240310_2_1_nucdu1.webp","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754292563/Job12_240309_view1_240310_3_wbykry.webp"],
           innerDetails: [
             {
               thickness: `10"`,
@@ -100,6 +104,7 @@ const MattressCard = () => {
           name: "Orthopaedic (Euro Top) Mattress",
           description: ` Experience comfort and support with our  Orthopaedic Euro Top Mattress. It features a sturdy  coil,  spring system with double tempered coils and edge guard for lasting support. Wrapped in special fabric with black edge tape, it combines ½ inch medium firm foam and 20 Oz Hallow Fibre for comfort. The Euro Top includes 1½ inch high-density foam over a ¾ inch foam support base, enhanced with a heavy-duty fibre pad for lumbar support and a ¼ inch quilted border for elegance and extra comfort.Rest Assured with Our Guarantee: This mattress comes with a  warranty, ensuring long-lasting durability and peace of mind. Sleep with confidence, knowing your investment is protected. 
           Comfort Level: Medium Firm  `,
+          image:["https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754293772/9_OrthopaedicEurotop_view2_230718_eecw5v.webp","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754293772/9_-Orthopaedic-Euro-top_view1_230718-scaled_kjnupc.webp","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754293772/Image_na6myg.jpg","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754293943/submitReview_J2OP6K2Gmh6BGKPswIyL_1702244062193_9A4755B7-0193-4D53-BF38-422E90535031_mny1k4.webp","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754294084/Job10_View2_231125_2_kq1bny.webp","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754294082/2a_df3ea1.webp"],
           innerDetails: [
             {
               thickness: `10"`,
@@ -123,10 +128,8 @@ const MattressCard = () => {
         },
         {
           name: "High Density pillow top Mattress",
-          description: `Sink into layers of comfort with the CloudRest HD Pillow Top Mattress, expertly crafted to deliver plush softness on the surface and resilient support beneath. Built with a solid high-density foam core, this mattress ensures proper spinal alignment and lasting durability, while the generously padded pillow top creates a cushiony feel ideal for a luxurious night’s rest. The pillow top layer is stitched directly onto the mattress surface, adding a thick, cloud-like buffer that gently cradles your body—relieving pressure on the hips, shoulders, and joints. Underneath, the HD foam base provides strong, consistent support that resists sagging and maintains shape over time, making it perfect for both back and side sleepers. Wrapped in a premium, breathable fabric cover with quilted detailing, the CloudRest enhances airflow and moisture control, keeping your sleep environment fresh and cool. Its hypoallergenic, dust-mite-resistant materials make it a safe and comfortable choice for sensitive sleepers. Whether you’re upgrading your master suite or furnishing a guest bedroom, the CloudRest HD Pillow Top Mattress offers the perfect balance of softness, support, and long-lasting quality—designed for those who want every night to feel like a retreat.
-
-
-`,
+          description: `Sink into layers of comfort with the CloudRest HD Pillow Top Mattress, expertly crafted to deliver plush softness on the surface and resilient support beneath. Built with a solid high-density foam core, this mattress ensures proper spinal alignment and lasting durability, while the generously padded pillow top creates a cushiony feel ideal for a luxurious night’s rest. The pillow top layer is stitched directly onto the mattress surface, adding a thick, cloud-like buffer that gently cradles your body—relieving pressure on the hips, shoulders, and joints. Underneath, the HD foam base provides strong, consistent support that resists sagging and maintains shape over time, making it perfect for both back and side sleepers. Wrapped in a premium, breathable fabric cover with quilted detailing, the CloudRest enhances airflow and moisture control, keeping your sleep environment fresh and cool. Its hypoallergenic, dust-mite-resistant materials make it a safe and comfortable choice for sensitive sleepers. Whether you’re upgrading your master suite or furnishing a guest bedroom, the CloudRest HD Pillow Top Mattress offers the perfect balance of softness, support, and long-lasting quality—designed for those who want every night to feel like a retreat.`,
+          image:["https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754295008/Dreamstar-Classic-Pillowtop-Mattress_neugon.jpg","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754295007/Dreamstar-Classic-Pillowtop-Mattress-for-Sale-600x600_olg50g.jpg","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754295005/Dreamstar-Classic-Pillowtop-Mattress-Toronto-600x600_shvxju.jpg"],
           innerDetails: [
             {
               thickness: `9"`,
@@ -142,6 +145,7 @@ const MattressCard = () => {
         {
           name: "High Density  Eurotop Mattress",
           description: `Indulge in plush comfort without sacrificing support with the Luxora HD EuroTop Mattress, crafted to deliver hotel-style luxury right in your bedroom. Featuring a thick, high-density foam core and an extra layer of soft EuroTop padding, this mattress provides a beautifully balanced sleep surface—firm at the core for alignment, yet sumptuously soft at the top for comfort. The EuroTop layer is seamlessly stitched into the mattress, offering a cleaner, more upscale appearance than traditional pillow tops while eliminating the feeling of separation between layers. This design enhances body contouring and helps relieve pressure points, especially at the hips and shoulders, for deeper, uninterrupted sleep. The Luxora is built with durable HD foam that resists sagging, maintaining its shape and support for years. It’s wrapped in a breathable, knitted fabric cover that promotes airflow and regulates temperature, keeping you cool and comfortable through the night. Whether you’re a side, back, or combination sleeper, the Luxora HD EuroTop Mattress offers a perfect blend of support, softness, and sophistication—ideal for those who crave both orthopedic benefits and plush, cloud-like rest.`,
+          image:["https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754300778/high_density_1_ii57m3.webp","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754300780/highdenisity_mattonly_close_2000x_auipae.webp","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754300779/highdensity_set_right_2000x_eb8bnc.webp"],
           innerDetails: [
             {
               thickness: `10"`,
@@ -174,7 +178,7 @@ const MattressCard = () => {
         {
           name: "High Density Double Sided Mattress",
           description: ` Indulge in plush comfort without sacrificing support with the Luxora HD EuroTop Mattress, crafted to deliver hotel-style luxury right in your bedroom. Featuring a thick, high-density foam core and an extra layer of soft EuroTop padding, this mattress provides a beautifully balanced sleep surface—firm at the core for alignment, yet sumptuously soft at the top for comfort. The EuroTop layer is seamlessly stitched into the mattress, offering a cleaner, more upscale appearance than traditional pillow tops while eliminating the feeling of separation between layers. This design enhances body contouring and helps relieve pressure points, especially at the hips and shoulders, for deeper, uninterrupted sleep.The Luxora is built with durable HD foam that resists sagging, maintaining its shape and support for years. It’s wrapped in a breathable, knitted fabric cover that promotes airflow and regulates temperature, keeping you cool and comfortable through the night. Whether you’re a side, back, or combination sleeper, the Luxora HD EuroTop Mattress offers a perfect blend of support, softness, and sophistication—ideal for those who crave both orthopedic benefits and plush, cloud-like rest.  `,
-
+          image:["https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754301554/0001605_oasis-luxury-mattress-set_1000_b3u18b.jpg","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754301556/0001606_oasis-luxury-mattress-set_1000_u5s3z6.jpg","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754301879/0001607_oasis-luxury-mattress_1000_ewnjhm.jpg","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754301550/20250417165455_madeincanada_svjwet.jpg","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754301551/20250401133210_img_4190_i1gdf7.jpg"],
           innerDetails: [
             {
               thickness: `12"`,
@@ -197,6 +201,7 @@ const MattressCard = () => {
         {
           name: "Extra Firm Mattress",
           description: `The SpineSure Extra Firm Mattress is specifically engineered for those who need uncompromising support and proper body alignment throughout the night. Designed with medical-grade firmness in mind, this mattress features a dense core of ultra-high-density foam or a reinforced spring system that offers maximum resistance against sinking—ideal for sleepers who prefer a firm, stable surface or suffer from chronic back pain. Unlike softer mattresses that contour deeply, the SpineSure provides a flat, supportive feel that helps maintain correct posture, reduces pressure on the lower back, and prevents spinal misalignment. Its no-sink construction ensures even weight distribution, making it especially suitable for stomach and back sleepers. The mattress is topped with a breathable, quilted cover crafted from anti-allergenic fabric that resists dust mites and maintains a cool, hygienic sleep environment. With minimal motion transfer and durable edge support, the SpineSure Extra Firm Mattress offers not just orthopedic benefits but also long-lasting performance—even under heavier body weight.Ideal for those who demand structured support and long-term durability, SpineSure is the mattress of choice for a restorative and balanced sleep experience. `,
+          image:["https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754302554/Beautyrest-Traditional-line-fabric_d67c81c3-1ce0-4401-abc9-2a67756d0e4a_mwg6wv.webp","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754302700/stonehengemattresssidemjmfurniture_800x_e3biot.webp","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754302703/stonehengetopmjmfurniture_800x_eex5il.webp","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754302555/BeautyrestDr.HardTightTopExtraFirmMattress_cgbxva.webp"],
           innerDetails: [
             {
               thickness: `8"`,
@@ -239,13 +244,14 @@ const MattressCard = () => {
           {/* //////////displaying card for categories */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-10">
             {mattresData.details.map((detail) => (
-              <Link key={detail.name} to={`${detail.name}`} state={{ detail }}>
-                <div className="bg-gray-100 p-6 rounded-lg text-center hover:shadow-lg transition">
-                  <img
-                    src="/public/bamboo7.webp"
-                    alt="Foam Mattress"
-                    className="mx-auto mb-4"
-                  />
+                <div className="bg-gray-100 p-6 rounded-lg text-center hover:shadow-lg transition " key={detail.name}>
+                  
+                  <ImageSlider images={detail.image}  rendering={rendering}/>
+
+                  
+                
+                <Link  to={`${detail.name}`} state={{ detail }}>
+              
                   <h3 className="font-bold text-lg mb-2">{detail.name}</h3>
                   <p className="text-gray-600 text-sm line-clamp-2">
                     {detail.description}
@@ -254,8 +260,9 @@ const MattressCard = () => {
                   <button className="mt-6 px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 hover:shadow-lg transition-all duration-300 ease-in-out">
                     View
                   </button>
+                  </Link>
                 </div>
-              </Link>
+              
             ))}
           </div>
         </div>

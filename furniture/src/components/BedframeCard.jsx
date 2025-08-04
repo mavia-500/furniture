@@ -1654,6 +1654,7 @@ const BedframeCard = () => {
       ],
     },
   ];
+  const rendering=0
   return (
     <div className="mt-20">
       {BedframesData.map((BedframesData, index) => (
@@ -1676,7 +1677,7 @@ const BedframeCard = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-10">
             {BedframesData.details.map((detail) => (
               <div className="bg-gray-100 p-6 rounded-lg text-center hover:shadow-lg transition">
-                <ImageSlider images={detail.image} />
+                <ImageSlider images={detail.image} rendering={rendering} />
                 <Link to={`${detail.name}`} state={{ detail }}>
                   <h3 className="font-bold text-lg mb-2">{detail.name}</h3>
                   <p className="text-gray-600 text-sm line-clamp-2">
