@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
-import CartFunctionality from "../components/CartFunctioanlity";
+import sendEmail from "../components/SendingEmail";
+import { useNavigate } from "react-router-dom";
 
 const CheckOut = () => {
-  const [subTotal, setSubTotal] = useState(0);
+  const navigate=useNavigate()
+  // const [subTotal, setSubTotal] = useState(0);
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -11,9 +13,11 @@ const CheckOut = () => {
     city: "",
     province: "",
     postalCode: "",
-    shipping: "standard",
-    payment: "creditCard",
+    addional_note: "",
+   
   });
+
+  // console.log(formData)
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -22,23 +26,22 @@ const CheckOut = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Checkout Data:", formData);
-    alert("Order placed successfully!");
+    sendEmail(formData,cartProducts,subTotal,setFormData)
+    setTimeout(()=>{
+      navigate('/')  
+    
+    },3000)
+    
   };
 
   const cartProducts = JSON.parse(localStorage.getItem("cartDetails"));
-  console.log(cartProducts);
+  // console.log(cartProducts);
 
-  useEffect(() => {
-    setSubTotal((prev) => {
-      cartProducts.map((product) => {
-        return (prev = prev + product.totalPrice);
-      });
-      return prev;
-    });
-  }, []);
+  
+  const subTotal = cartProducts.reduce((acc, product) => acc + product.totalPrice, 0);
+  // Format cart items for email
 
-  console.log(subTotal);
+  // console.log(subTotal);
   return (
     <div className="mt-20 flex flex-col lg:flex-row gap-8 max-w-6xl mx-auto px-4">
       {/* LEFT: Checkout Form */}
@@ -65,7 +68,6 @@ const CheckOut = () => {
               placeholder="Email Optional"
               onChange={handleChange}
               className="border p-3 rounded w-full"
-              required
             />
             <input
               type="tel"
@@ -108,12 +110,19 @@ const CheckOut = () => {
               className="border p-3 rounded w-full uppercase"
               required
             />
+
+            <textarea
+              name="addional_note"
+              onChange={handleChange}
+              placeholder="Addional Note if any"
+              className="border p-3 rounded w-full uppercase"
+            />
           </div>
 
           {/* Shipping Method */}
           <div>
             <h3 className="text-lg font-semibold mb-2">Shipping Method</h3>
-            <span className="ml-2">Standard (1–2 days) — $20–$50</span>
+            <span className="ml-2">Standard (1–2 days) — $20–$50-Same day delivery also avaliable</span>
           </div>
 
           {/* Payment Method */}
@@ -167,7 +176,7 @@ const CheckOut = () => {
                     {product.size} / {product.thickness}
                   </p>
                   <p className="text-base font-bold text-green-700">
-                    ${product.price}
+                    <span className="text-sm text-gray-400 ">{product.quantity} x</span>  ${product.price}
                   </p>
                 </div>
               </div>

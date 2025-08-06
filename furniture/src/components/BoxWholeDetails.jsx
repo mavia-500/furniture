@@ -8,7 +8,7 @@ import ImageSlider from "./ImageSlider";
 const BoxWholeDetails = () => {
   const location = useLocation();
   const details = location.state.detail; // Example: { title, price, discount, image, description }
-  console.log(details);
+  // console.log(details);
 
   // const [thickness, setThickness] = useState("");
   const [price, setPrice] = useState();
@@ -157,7 +157,8 @@ const BoxWholeDetails = () => {
                 size: size,
                 price: price,
                 quantity: counter,
-                totalPrice: price,
+                totalPrice: price*counter,
+                image:details.image
               }}
             />
           )}

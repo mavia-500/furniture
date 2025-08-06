@@ -8,7 +8,7 @@ const CartFuntionality = ({ isOpen, onClose, cartItems }) => {
   const [totalBill, setTotalBill] = useState(0);
   const [cartDetails, setCartDetails] = useState([]);
   const navigate = useNavigate();
-  console.log(cartItems);
+  // console.log(cartItems);
   useEffect(() => {
     const savedCart = JSON.parse(localStorage.getItem("cartDetails")) || [];
 
@@ -16,7 +16,7 @@ const CartFuntionality = ({ isOpen, onClose, cartItems }) => {
       Object.keys(cartItems).length > 0 ? [...savedCart, cartItems] : savedCart
     );
   }, []);
-  console.log(cartDetails);
+  // console.log(cartDetails);
   useEffect(() => {
     localStorage.setItem("cartDetails", JSON.stringify(cartDetails));
   }, [cartDetails]);
@@ -33,7 +33,7 @@ const CartFuntionality = ({ isOpen, onClose, cartItems }) => {
             updatedItem.quantity = updatedItem.quantity - 1;
           }
           updatedItem.totalPrice = updatedItem.quantity * item.price;
-          console.log(updatedItem);
+          // console.log(updatedItem);
           return updatedItem;
         }
         return item;
@@ -62,7 +62,7 @@ const CartFuntionality = ({ isOpen, onClose, cartItems }) => {
   useEffect(() => {
     setTotalBill(() => {
       cartDetails.map((cartitem) => {
-        return (finalPrice = finalPrice + cartitem.price*cartitem.quantity);
+        return (finalPrice = finalPrice + cartitem.price * cartitem.quantity);
       });
       return finalPrice;
     });
@@ -134,7 +134,7 @@ const CartFuntionality = ({ isOpen, onClose, cartItems }) => {
                   </div>
 
                   <div className="mt-5">
-                    <img className="h-35 w-45" src="/bed.webp" alt="" />
+                    <img className="h-35 w-45" src={item.image[0]} alt="" />
                   </div>
                   <p className="text-4xl mt-5 text-gray-600">
                     {" "}
@@ -147,13 +147,13 @@ const CartFuntionality = ({ isOpen, onClose, cartItems }) => {
         </div>
 
         {totalBill && (
-          <div className="mt-5 bg-gradient-to-r from-purple-600 to-indigo-600 p-4 rounded-2xl shadow-lg flex justify-between items-center">
+          <div className="mt-5 bg-gradient-to-r from-green to-indigo-600 p-4 rounded-2xl shadow-lg flex justify-between items-center">
             <p className="text-white text-lg font-semibold">
               Total Bill Including Taxes:
+              <span className="ml-3 text-yellow-300 text-2xl font-bold">
+                ${totalBill}
+              </span>
             </p>
-            <span className="mt-9 text-yellow-300 text-2xl font-bold">
-              ${totalBill}
-            </span>
           </div>
         )}
 

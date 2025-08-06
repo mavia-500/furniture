@@ -5,7 +5,7 @@ import MattressCard from "../components/MattressCard";
 const Mattress = () => {
   return (
     <div className="mt-20">
-      <div id="foam-mattress">
+      <div >
         <MattressCard />
       </div>
     </div>

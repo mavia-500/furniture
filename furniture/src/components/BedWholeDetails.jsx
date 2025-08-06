@@ -9,7 +9,7 @@ import ImageSlider from "./ImageSlider";
 const BedWholeDetails = () => {
   const location = useLocation();
   const details = location.state.detail; // Example: { title, price, discount, image, description }
-  console.log(details);
+  // console.log(details);
 
   const [color, setColor] = useState("");
   const [price, setPrice] = useState();
@@ -205,7 +205,8 @@ const BedWholeDetails = () => {
                     size: size,
                     price: price,
                     quantity: counter,
-                    totalPrice: price,
+                    totalPrice: price*counter,
+                    image:details.image
                   }}
                 />
               </div>

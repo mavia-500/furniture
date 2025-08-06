@@ -231,7 +231,7 @@ const MattressCard = () => {
       {mattressData.map((mattresData) => (
         <div key={mattresData.category} id={`${mattresData.category}`}>
           <div className="flex justify-center items-center  bg-gray-100 px-4">
-            <div className="max-w-lg p-8 text-center border border-gray-200 hover:shadow-2xl transition-shadow duration-300">
+            <div className="max-w-lg p-8 text-center border border-gray-200 bg-gray-200 hover:shadow-2xl transition-shadow duration-300">
               <h3 className="text-3xl font-bold text-gray-800 mb-4">
                 {mattresData.category}
               </h3>
@@ -242,7 +242,7 @@ const MattressCard = () => {
           </div>
 
           {/* //////////displaying card for categories */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-10 mb-10">
             {mattresData.details.map((detail) => (
                 <div className="bg-gray-100 p-6 rounded-lg text-center hover:shadow-lg transition " key={detail.name}>
                   

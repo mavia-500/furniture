@@ -3,7 +3,7 @@ import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import { FaRegArrowAltCircleLeft } from "react-icons/fa";
 
 const ImageSlider = ({ images, rendering }) => {
-  console.log(rendering);
+  // console.log(rendering);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
@@ -27,7 +27,9 @@ const ImageSlider = ({ images, rendering }) => {
         <img
           src={images[currentIndex]}
           alt="Foam Mattress"
-          className={`w-full ${rendering===0 && "h-60"} object-contain rounded-lg`}
+          className={`w-full ${
+            rendering === 0 && "h-60"
+          } object-contain rounded-lg`}
         />
         {/* Navigation Buttons */}
 
