@@ -225,8 +225,7 @@ const MattressWholeDetails = () => {
           <div className="mt-6">
             <h2 className="text-lg font-semibold mb-2">Shipping in Canada</h2>
             <p className="text-gray-600 text-sm">
-              Shipping charges will range from $20 to $50 depending on your
-              location. Delivery usually takes 1 to 3 business days.
+            For orders placed before 12 PM , we guarantee delivery on the same day. Orders placed after 12 PM  will be delivered the very next day. Charges range between $20 - $50.
             </p>
           </div>
 
