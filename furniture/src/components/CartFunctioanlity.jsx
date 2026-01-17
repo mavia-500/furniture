@@ -13,7 +13,7 @@ const CartFuntionality = ({ isOpen, onClose, cartItems }) => {
     const savedCart = JSON.parse(localStorage.getItem("cartDetails")) || [];
 
     setCartDetails(() =>
-      Object.keys(cartItems).length > 0 ? [...savedCart, cartItems] : savedCart
+      Object.keys(cartItems).length > 0 ? [...savedCart, cartItems] : savedCart,
     );
   }, []);
   // console.log(cartDetails);
@@ -37,7 +37,7 @@ const CartFuntionality = ({ isOpen, onClose, cartItems }) => {
           return updatedItem;
         }
         return item;
-      })
+      }),
     );
   };
 
@@ -77,7 +77,7 @@ const CartFuntionality = ({ isOpen, onClose, cartItems }) => {
     <div className="fixed inset-0 bg-opacity-50" onClick={onClose}>
       {/* Sidebar */}
       <div
-        className={`fixed top-0 right-0 w-100 h-full bg-black shadow-lg p-5 transition-transform duration-300 overflow-y-auto ${
+        className={`fixed top-0 right-0 w-full sm:w-96 md:w-[420px] h-full bg-black shadow-lg p-5 transition-transform duration-300 overflow-y-auto ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
         onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
