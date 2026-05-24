@@ -19,9 +19,9 @@ const BoxSpring = () => {
             { size: "queen", price: 115 },
           ],
           image: [
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754132969/box_spring_jdmftx.webp",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754132969/box_springn_1_l9rbbr.webp",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754133312/WhatsApp_Image_2025-08-02_at_4.14.30_PM_efp3si.jpg",
+            "/all-images/box spring.webp",
+            "/all-images/box springn 1.webp",
+            // "/all-images/WhatsApp_Image_2025-08-02_at_4.14.30_PM.jpg",
           ],
         },
         {
@@ -32,8 +32,8 @@ const BoxSpring = () => {
             { size: "king-split", price: 160 },
           ],
           image: [
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754135491/split_box_spring_a_tj1vem.webp",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754135603/split_box_yh9z0b.jpg",
+            "/all-images/split box spring a.webp",
+            "/all-images/split box.jfif",
           ],
         },
       ],

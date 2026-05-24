@@ -8,7 +8,7 @@ const Main = () => {
       categoryDescription:
         "Our premium foam range includes breathable Simple Foam for everyday support, naturally fresh Bamboo Foam for enhanced hygiene, and cooling Memory Gel Foam that adapts to your body for ultimate comfort.",
       imageUrl:
-        "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754292563/Job12_240309_view5_240321_zjsrko.webp",
+        "/home/Job12_240309_view5_240321.webp",
       link: "/mattress#Foam-Mattress",
     },
     {
@@ -16,7 +16,7 @@ const Main = () => {
       categoryDescription:
         "Designed for superior back support, this mattress combines firm, high-density foam with a durable spring system to promote proper spinal alignment.It offers long-lasting support, reduced pressure points, and enhanced durability for a restful night’s sleep.",
       imageUrl:
-        "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754293772/9_OrthopaedicEurotop_view2_230718_eecw5v.webp",
+        "/home/9_OrthopaedicEurotop_view2_230718.webp",
       link: "/mattress#Eurotop-Mattress",
     },
     {
@@ -24,7 +24,7 @@ const Main = () => {
       categoryDescription: `
 An HD double-sided mattress is a high-density mattress designed to be flipped and used on both sides, extending its lifespan and maintaining consistent comfort. These mattresses are built with durable, high-density foams . `,
       imageUrl:
-        "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754301554/0001605_oasis-luxury-mattress-set_1000_b3u18b.jpg",
+        "/home/0001605_oasis-luxury-mattress-set_1000.webp",
       link: "/mattress#HD-Double-Sided-Mattress",
     },
     {
@@ -33,7 +33,7 @@ An HD double-sided mattress is a high-density mattress designed to be flipped an
         `
 An Extra Firm (Hard) Mattress is designed to provide maximum support with minimal cushioning, making it ideal for people who prefer a firm sleeping surface. It helps maintain proper spinal alignment and reduces sinking, which can benefit back and stomach sleepers or individuals with back pain.`,
       imageUrl:
-        "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754302700/stonehengemattresssidemjmfurniture_800x_e3biot.webp",
+        "/home/stonehengemattresssidemjmfurniture_800x.webp",
       link: "/mattress#Extra-Firm(Hard)-Mattress",
     },
     {
@@ -41,7 +41,7 @@ An Extra Firm (Hard) Mattress is designed to provide maximum support with minima
       categoryDescription:
         "Storage bed frames are designed with built-in drawers orcompartments, offering a smart way to save space and keep your bedroom organized. They combine style and functionality, providing extra storage without taking up additional floor space.",
       imageUrl:
-        "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754136430/h2125_spxvv7.jpg",
+        "/home/h2125(7).webp",
       link: "/bedframes#Storage-Bed-Frames",
     },
     {
@@ -49,7 +49,7 @@ An Extra Firm (Hard) Mattress is designed to provide maximum support with minima
       categoryDescription:
         "Metal bed frames are strong, durable, and easy to maintain,offering reliable support for your mattress. With sleek, modern designs or classic styles, they suit any bedroom décor while providing a sturdy foundation that lasts for years.",
       imageUrl:
-        "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754142196/2201B_zw6itc.jpg",
+        "/home/2201B.webp",
       link: "/bedframes#Metal-Bed-Frames",
     },
     {
@@ -57,7 +57,7 @@ An Extra Firm (Hard) Mattress is designed to provide maximum support with minima
       categoryDescription:
         "Platform bed frames feature a low-profile design with a solid or slatted base, eliminating the need for a box spring. They offer strong, even support for your mattress and add a modern, minimalist touch to any bedroom.",
       imageUrl:
-        "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754143251/2110-linen_light-grey_WEB_cq3459.jpg",
+        "/home/2110-linen_light-grey_WEB.webp",
       link: "/bedframes#Plat-Form-Bed-Frame-With-Head-Board",
     },
     {
@@ -65,7 +65,7 @@ An Extra Firm (Hard) Mattress is designed to provide maximum support with minima
       categoryDescription:
         "A platform bed frame without a headboard offers a clean, minimalist look that’s perfect for modern spaces. Its sturdy base provides excellent mattress support and allows you the freedom to customize your bedroom décor to suit your style.",
       imageUrl:
-        "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754142794/T2400Web_kjnuga.png",
+        "/home/T2400Web.webp",
       link: "/bedframes#Platform-Without-HeadBoard",
     },
     {
@@ -73,7 +73,7 @@ An Extra Firm (Hard) Mattress is designed to provide maximum support with minima
       categoryDescription:
         "Bunk bed frames are a smart space-saving solution, featuring two  stacked beds—perfect for kids’ rooms or shared spaces. They combine functionality with fun, maximizing floor space while providing sturdy and safe sleeping arrangements.",
       imageUrl:
-        "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754146721/T2700GWeb_xetaxm.png",
+        "/home/T2700GWeb.webp",
       link: "/bedframes#Bunk-Bed-Frames",
     },
     {
@@ -81,7 +81,7 @@ An Extra Firm (Hard) Mattress is designed to provide maximum support with minima
       categoryDescription:
         " A box spring is a supportive base made of a sturdy wooden or metal frame covered in fabric, often with springs or a metal grid inside. It sits under your mattress to provide extra support, absorb shock, and help extend the life of your mattress.",
       imageUrl:
-        "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754135491/split_box_spring_a_tj1vem.webp",
+        "/home/split box spring a.webp",
       link: "/boxspring",
     },
   ];

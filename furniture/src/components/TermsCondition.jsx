@@ -23,8 +23,7 @@ const TermsCondition = () => {
             This website, operated by Hilyah Canada Inc., is made available to
             you, the user, conditioned upon your acceptance of all terms,
             conditions, policies, and notices stated herein. References to “we”,
-            “us”, and “our” throughout the site refer exclusively to Cloud
-            Comfort Canada Inc. Our website offers various tools and services,
+            “us”, and “our” throughout the site refer exclusively to Hilyah Canada Inc. Our website offers various tools and services,
             which you may use or purchase under the terms outlined in this
             document.
           </p>

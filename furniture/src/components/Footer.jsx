@@ -65,10 +65,10 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-3">Follow Us</h3>
           <div className="flex space-x-4 text-gray-400">
             <a href="https://www.facebook.com/profile.php?id=100070291784620"><FaFacebook className="hover:text-white" /></a>
-            <a href="#"><FaInstagram className="hover:text-white" /></a>
-            <a href="#"><FaSquareThreads className="hover:text-white" /></a>
-            <a href="#"><FaYoutube className="hover:text-white" /></a>
-            <a href="#"><FaTiktok  className="hover:text-white" /></a>
+            <a href="https://www.instagram.com/hilyahfurniture?igsh=MWN3dzlnNWVxMDc1NQ=="><FaInstagram className="hover:text-white" /></a>
+            {/* <a href="#"><FaSquareThreads className="hover:text-white" /></a> */}
+            {/* <a href="#"><FaYoutube className="hover:text-white" /></a> */}
+            {/* <a href="#"><FaTiktok  className="hover:text-white" /></a> */}
           </div>
         </div>
 
@@ -76,7 +76,7 @@ const Footer = () => {
 
       {/* Copyright */}
       <div className="mt-10 text-center text-sm text-gray-500 border-t pt-4 border-gray-700">
-        © {new Date().getFullYear()} Cloud Comfort. All rights reserved.
+        © {new Date().getFullYear()} Hilyah. All rights reserved.
       </div>
     </footer>
   );

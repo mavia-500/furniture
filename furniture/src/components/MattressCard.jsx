@@ -33,10 +33,10 @@ const MattressCard = () => {
             "Crafted from regular high-quality foam for balanced comfort and support. This  flippable design allows for extended durability and even wear on both sides. Features closed, well-stitched corners to enhance strength and lifespan. Neatly packed in a heavy-duty, strong-grip plastic bag for protection during transport and storage.",
           comfortLevel: "Soft",
           image: [
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754293231/F3-1_unszt9.png",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754293229/F2-1_oyxpnz.png",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754293229/5inch_view2_231110_bivlfd.webp",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754293229/2_80a80fa0-2fbc-46a9-93ce-00235317758f_k4naak.webp",
+            "/mattress/F3-1.webp",
+            "/mattress/F2-1.webp",
+            "/mattress/5inch_view2_231110.webp",
+            "/mattress/2_80a80fa0-2fbc-46a9-93ce-00235317758f.webp",
           ],
           innerDetails: [
             {
@@ -62,10 +62,10 @@ const MattressCard = () => {
             "Completely springless design for a quiet and supportive sleep experience. Built with premium-quality foam that adapts to your body’s natural shape, providing consistent comfort and support. The surface is wrapped in a soft, stretchable bamboo fabric that enhances breathability, regulates temperature, and adds a natural, gentle touch to your sleep. ideal for all sleep positions, offering a balanced feel between plush softness and firm support. It provides enough softness to relieve pressure on shoulders and hips while maintaining firm support to keep the spine aligned.",
           comfortLevel: "Medium",
           image: [
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754293468/bamboo7_mattress_view2_230709_3_1_lhjawt.webp",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754293467/IMG_5895_lcrxvk.webp",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754293467/bamboo-7_-mattress_view1_230709_3-1-scaled_h2rh8j.webp",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754293472/K1_j8y9uz.png",
+            "/mattress/bamboo7_mattress_view2_230709_3_1.webp",
+            "/mattress/IMG_5895.webp",
+            "/mattress/bamboo-7_-mattress_view1_230709_3-1-scaled.webp",
+            // "/mattress/K1.webp",
           ],
           innerDetails: [
             {
@@ -85,10 +85,10 @@ const MattressCard = () => {
       `,
           comfortLevel: "Medium",
           image: [
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754292563/Job12_240309_view5_240321_zjsrko.webp",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754292563/Job12_240309_view3_240310_1_t78wl6.webp",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754292563/Job12_240309_view2_240310_2_1_nucdu1.webp",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754292563/Job12_240309_view1_240310_3_wbykry.webp",
+            "/all-images/Job12_240309_view5_240321.webp",
+            "/all-images/Job12_240309_view3_240310_1.webp",
+            "/all-images/Job12_240309_view2_240310_2.webp",
+            "/all-images/Job12_240309_view1_240310_3.webp",
           ],
           innerDetails: [
             {
@@ -117,12 +117,12 @@ const MattressCard = () => {
            `,
           comfortLevel: "Medium Firm",
           image: [
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754293772/9_OrthopaedicEurotop_view2_230718_eecw5v.webp",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754293772/9_-Orthopaedic-Euro-top_view1_230718-scaled_kjnupc.webp",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754293772/Image_na6myg.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754293943/submitReview_J2OP6K2Gmh6BGKPswIyL_1702244062193_9A4755B7-0193-4D53-BF38-422E90535031_mny1k4.webp",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754294084/Job10_View2_231125_2_kq1bny.webp",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754294082/2a_df3ea1.webp",
+            "/all-images/9_OrthopaedicEurotop_view2_230718.webp",
+            "/all-images/9_-Orthopaedic-Euro-top_view1_230718-scaled.webp",
+            "/all-images/Image.jpg",
+            "/all-images/submitReview_J2OP6K2Gmh6BGKPswIyL_1702244062193_9A4755B7-0193-4D53-BF38-422E90535031.webp",
+            "/all-images/Job10_View2_231125_2.webp",
+            "/all-images/2a.webp",
           ],
           innerDetails: [
             {
@@ -149,8 +149,8 @@ const MattressCard = () => {
           name: "High Density pillow top Mattress",
           description: `Sink into layers of comfort with the CloudRest HD Pillow Top Mattress, expertly crafted to deliver plush softness on the surface and resilient support beneath. Built with a solid high-density foam core, this mattress ensures proper spinal alignment and lasting durability, while the generously padded pillow top creates a cushiony feel ideal for a luxurious night’s rest. The pillow top layer is stitched directly onto the mattress surface, adding a thick, cloud-like buffer that gently cradles your body—relieving pressure on the hips, shoulders, and joints. Underneath, the HD foam base provides strong, consistent support that resists sagging and maintains shape over time, making it perfect for both back and side sleepers. Wrapped in a premium, breathable fabric cover with quilted detailing, the CloudRest enhances airflow and moisture control, keeping your sleep environment fresh and cool. Its hypoallergenic, dust-mite-resistant materials make it a safe and comfortable choice for sensitive sleepers. Whether you’re upgrading your master suite or furnishing a guest bedroom, the CloudRest HD Pillow Top Mattress offers the perfect balance of softness, support, and long-lasting quality—designed for those who want every night to feel like a retreat.`,
           image: [
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754554919/3-02303M-01651-KINGSDOWN-STUDIO-ACTON-TT-Ecomm-01__89084_od6jym.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754554919/3-02303M-01656-KINGSDOWN-STUDIO-ACTON-TT-Ecomm-03__Product-image___88969__43485_jjlwat.jpg",
+            "/all-images/3-02303M-01651-KINGSDOWN-STUDIO-ACTON-TT-Ecomm-01__89084.jpg",
+            "/all-images/3-02303M-01656-KINGSDOWN-STUDIO-ACTON-TT-Ecomm-03__Product-image___88969__43485.jpg",
           ],
           innerDetails: [
             {
@@ -168,9 +168,9 @@ const MattressCard = () => {
           name: "High Density  Eurotop Mattress",
           description: `Indulge in plush comfort without sacrificing support with the Luxora HD EuroTop Mattress, crafted to deliver hotel-style luxury right in your bedroom. Featuring a thick, high-density foam core and an extra layer of soft EuroTop padding, this mattress provides a beautifully balanced sleep surface—firm at the core for alignment, yet sumptuously soft at the top for comfort. The EuroTop layer is seamlessly stitched into the mattress, offering a cleaner, more upscale appearance than traditional pillow tops while eliminating the feeling of separation between layers. This design enhances body contouring and helps relieve pressure points, especially at the hips and shoulders, for deeper, uninterrupted sleep. The Luxora is built with durable HD foam that resists sagging, maintaining its shape and support for years. It’s wrapped in a breathable, knitted fabric cover that promotes airflow and regulates temperature, keeping you cool and comfortable through the night. Whether you’re a side, back, or combination sleeper, the Luxora HD EuroTop Mattress offers a perfect blend of support, softness, and sophistication—ideal for those who crave both orthopedic benefits and plush, cloud-like rest.`,
           image: [
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754300778/high_density_1_ii57m3.webp",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754300780/highdenisity_mattonly_close_2000x_auipae.webp",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754300779/highdensity_set_right_2000x_eb8bnc.webp",
+            "/all-images/high_density_1.webp",
+            "/all-images/highdenisity_mattonly_close_2000x.webp",
+            "/all-images/highdensity_set_right_2000x.webp",
           ],
           innerDetails: [
             {
@@ -236,10 +236,10 @@ const MattressCard = () => {
           name: "Extra Firm Mattress",
           description: `The SpineSure Extra Firm Mattress is specifically engineered for those who need uncompromising support and proper body alignment throughout the night. Designed with medical-grade firmness in mind, this mattress features a dense core of ultra-high-density foam  that offers maximum resistance against sinking—ideal for sleepers who prefer a firm, stable surface or suffer from chronic back pain. Unlike softer mattresses that contour deeply, the SpineSure provides a flat, supportive feel that helps maintain correct posture, reduces pressure on the lower back, and prevents spinal misalignment. Its no-sink construction ensures even weight distribution, making it especially suitable for stomach and back sleepers. The mattress is topped with a breathable, quilted cover crafted from anti-allergenic fabric that resists dust mites and maintains a cool, hygienic sleep environment. With minimal motion transfer and durable edge support, the SpineSure Extra Firm Mattress offers not just orthopedic benefits but also long-lasting performance—even under heavier body weight.Ideal for those who demand structured support and long-term durability. `,
           image: [
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754302554/Beautyrest-Traditional-line-fabric_d67c81c3-1ce0-4401-abc9-2a67756d0e4a_mwg6wv.webp",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754302700/stonehengemattresssidemjmfurniture_800x_e3biot.webp",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754302703/stonehengetopmjmfurniture_800x_eex5il.webp",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754302555/BeautyrestDr.HardTightTopExtraFirmMattress_cgbxva.webp",
+            "/all-images/Beautyrest-Traditional-line-fabric_d67c81c3-1ce0-4401-abc9-2a67756d0e4a.webp",
+            "/all-images/stonehengemattresssidemjmfurniture_800x.webp",
+            "/all-images/stonehengetopmjmfurniture_800x.webp",
+            "/all-images/BeautyrestDr.HardTightTopExtraFirmMattress.webp",
           ],
           innerDetails: [
             {

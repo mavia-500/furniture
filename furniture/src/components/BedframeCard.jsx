@@ -113,12 +113,12 @@ const BedframeCard = () => {
           capacity_queen: 500,
           capacity_king: 650,
           image: [
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754141386/T2120G_WEB2_bkncff.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754141384/T2120G_WEB1_tpyfn6.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754141382/T2120B_WEB2_sxzcfh.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754141382/T2120B_WEB1_vsg35t.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754141381/T2120W_WEB1_colwys.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754141380/T2120W_WEB2_wbmdqz.jpg",
+            "/all-images/T2120G_WEB2.jpg",
+            "/all-images/T2120G_WEB1.jpg",
+            "/all-images/T2120B_WEB2.jpg",
+            "/all-images/T2120B_WEB1.jpg",
+            "/all-images/T2120W_WEB1.jpg",
+            "/all-images/T2120W_WEB2.jpg",
           ],
           innerDetails: [
             {
@@ -213,18 +213,18 @@ const BedframeCard = () => {
           capacity_king: 650,
           assembly_instruction: "pdf file link",
           image: [
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754141589/T2334W_1_WEB_litu8r.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754141588/T2334B_1_WEB_qcglvg.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754141586/T2334B_W_WEB_j95sp6.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754141583/T2334B_2_WEB_oqpgad.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754141581/T2334B_1_WEB_2_uxwk0w.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754141580/T2334B_2_WEB_2_isqmk8.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754141578/T2334B_3_WEB_2_yrpfpp.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754141576/T2334B_4_WEB_2_amlpho.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754141574/T2334W_1_WEB_2-copy_z2a9pr.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754141573/T2334W_2_WEB_2-copy_nxje5k.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754141571/T2334W_3_WEB_2_zo8c4e.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754141570/T2334W_4_WEB_2_bquzhc.jpg",
+            "/all-images/T2334W_1_WEB.jpg",
+            "/all-images/T2334B_1_WEB.jpg",
+            "/all-images/T2334B_W_WEB.jpg",
+            "/all-images/T2334B_2_WEB.jpg",
+            "/all-images/T2334B_1_WEB_2.jpg",
+            "/all-images/T2334B_2_WEB_2.jpg",
+            "/all-images/T2334B_3_WEB_2.jpg",
+            "/all-images/T2334B_4_WEB_2.jpg",
+            "/all-images/T2334W_1_WEB_2-copy.jpg",
+            "/all-images/T2334W_2_WEB_2-copy.jpg",
+            "/all-images/T2334W_3_WEB_2.jpg",
+            "/all-images/T2334W_4_WEB_2.jpg",
           ],
           innerDetails: [
             {
@@ -292,10 +292,7 @@ const BedframeCard = () => {
           capacity_double: 550,
           capacity_queen: 650,
           capacity_king: 700,
-          image: [
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754141822/2152_WEB_ivvrzr.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754141821/2152W_WEB_dsrgh0.jpg",
-          ],
+          image: ["/all-images/2152_WEB.jpg", "/all-images/2152W_WEB.jpg"],
           innerDetails: [
             {
               material: "Linen",
@@ -363,10 +360,10 @@ const BedframeCard = () => {
 
           capacity_double: 300,
           image: [
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754141971/2100G_REV_WEB_mao4gi.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754141968/2100W_WEB_lq36g2.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754141966/2100E_WEB_l76zny.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754141963/2100N_WEB-1_jyyoaw.jpg",
+            "/all-images/2100G_REV_WEB.jpg",
+            "/all-images/2100W_WEB.jpg",
+            "/all-images/2100E_WEB.jpg",
+            "/all-images/2100N_WEB-1.jpg",
           ],
           innerDetails: [
             {
@@ -441,10 +438,10 @@ const BedframeCard = () => {
           capacity_double: 500,
           capacity_queen: 600,
           image: [
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754142196/2201B_zw6itc.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754142193/2201W_u10ncz.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754142201/2201_REV_WEB1_e7v3zg.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754142199/2201_REV_WEB2_yz5zhq.jpg",
+            "/all-images/2201B.jpg",
+            "/all-images/2201W.jpg",
+            "/all-images/2201_REV_WEB1.jpg",
+            "/all-images/2201_REV_WEB2.jpg",
           ],
           innerDetails: [
             {
@@ -512,9 +509,9 @@ const BedframeCard = () => {
           capacity_double: 500,
           capacity_queen: 600,
           image: [
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754142354/2233_NEW_REV_WEB_o5sfqp.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754142351/T2233_WEB_2_ltdocj.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754142347/Drawers_WEB_t6tfgo.png",
+            "/all-images/2233_NEW_REV_WEB.jpg",
+            "/all-images/T2233_WEB_2.jpg",
+            "/all-images/Drawers_WEB.png",
           ],
           innerDetails: [
             {
@@ -581,9 +578,9 @@ const BedframeCard = () => {
           capacity_twin: 400,
           capacity_double: 500,
           image: [
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754142499/2310_REV_WEB1_jbdbrf.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754142496/2310_WEB_1_c2xdoc.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754142493/Drawers_WEB_1_i5pmk1.png",
+            "/all-images/2310_REV_WEB1.jpg",
+            "/all-images/2310_WEB_1.jpg",
+            "/all-images/Drawers_WEB_1.png",
           ],
           innerDetails: [
             {
@@ -616,8 +613,8 @@ const BedframeCard = () => {
           capacity_twin: 400,
           capacity_double: 500,
           image: [
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754142704/2300_WEB_1_nqkvdi.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754142707/2300_REV_WEB1_rarxpv.jpg",
+            "/all-images/2300_WEB_1.jpg",
+            "/all-images/2300_REV_WEB1.jpg",
           ],
           innerDetails: [
             {
@@ -648,9 +645,7 @@ const BedframeCard = () => {
             "Elevate Your Bedroom with our Modern Metal Bed Frame! Discover a combination of style, durability, and convenience with our Modern Metal Bed Frame. This versatile bed frame is designed to enhance your bedroom, and here are five important features that make it a standout choice: Sturdy Metal Frame: Crafted from high-quality metal, this bed frame provides unwavering support and stability. It’s built to last, ensuring you can enjoy restful nights of sleep for years to come. Metal Slats for Support: Say goodbye to the hassle of traditional box springs. Our bed frame includes metal slats that offer excellent support to your mattress. This not only streamlines your setup but also provides extra comfort. Centre Support: We’ve designed this bed frame with a central support system, ensuring that your mattress remains evenly and securely in place. It’s a thoughtful addition for a good night’s sleep. No Box Spring Required: Embrace a more modern and uncluttered bedroom aesthetic. With our bed frame, you can skip the traditional box spring. Enjoy a cleaner, sleeker look while still receiving the support you need. Versatile for Any Room: This bed frame is perfect for various settings. Whether it’s a kid’s room, guest room, or your own space, its contemporary design seamlessly fits into any bedroom decor. Invest in your bedroom’s style and comfort with our Modern Metal Bed Frame. The sturdy metal frame, support slats, and no-box spring-needed design offer both convenience and long-lasting value. It’s the perfect choice to elevate your bedroom without breaking the bank. Weight Capacity: 400 lbs",
           assembly_instruction: "pdf file link",
           capacity_twin: 400,
-          image: [
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754142794/T2400Web_kjnuga.png",
-          ],
+          image: ["/all-images/T2400Web.png"],
           innerDetails: [
             {
               material: "Metal",
@@ -674,10 +669,10 @@ const BedframeCard = () => {
           assembly_instruction: "pdf file link",
           capacity_twin: 400,
           image: [
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754142898/T2412_WEB_1_rjj642.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754142895/T2412_WEB_2_bbgeb8.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754142891/T2412_WEB_3_pcpf7x.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754142888/T2412_WEB_4_eecrnm.jpg",
+            "/all-images/T2412_WEB_1.jpg",
+            "/all-images/T2412_WEB_2.jpg",
+            "/all-images/T2412_WEB_3.jpg",
+            "/all-images/T2412_WEB_4.jpg",
           ],
           innerDetails: [
             {
@@ -712,11 +707,11 @@ const BedframeCard = () => {
           capacity_queen: 500,
           capacity_king: 650,
           image: [
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754143092/2113-PU_white_WEB_gq6clx.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754143088/2113E_WEB_dsrzfs.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754143096/2113-PU_black_WEB_cfdp3m.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754143100/2113BLUE_WEB_ll2y3o.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754143104/2113-F_linen_WEB_yk5nqd.jpg",
+            "/all-images/2113-PU_white_WEB.jpg",
+            "/all-images/2113E_WEB.jpg",
+            "/all-images/2113-PU_black_WEB.jpg",
+            "/all-images/2113BLUE_WEB.jpg",
+            "/all-images/2113-F_linen_WEB.jpg",
           ],
           innerDetails: [
             {
@@ -799,11 +794,11 @@ const BedframeCard = () => {
           capacity_queen: 500,
           capacity_king: 650,
           image: [
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754143251/2110-linen_light-grey_WEB_cq3459.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754143247/2110-PU_black_1_WEB_aycdrt.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754143243/2110-PU_white_WEB_c3lidw.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754143239/2110E_WEB_omwgnf.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754143236/2110GB_WEB_fmpc1l.jpg",
+            "/all-images/2110-linen_light-grey_WEB.jpg",
+            "/all-images/2110-PU_black_1_WEB.jpg",
+            "/all-images/2110-PU_white_WEB.jpg",
+            "/all-images/2110E_WEB.jpg",
+            "/all-images/2110GB_WEB.jpg",
           ],
           innerDetails: [
             {
@@ -919,9 +914,9 @@ const BedframeCard = () => {
           capacity_queen: 650,
           capacity_king: 700,
           image: [
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754143379/2190C_WEB_fkytys.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754143373/2190G_WEB_wv1nwv.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754143369/2190W_WEB_xjmqt3.jpg",
+            "/all-images/2190C_WEB.jpg",
+            "/all-images/2190G_WEB.jpg",
+            "/all-images/2190W_WEB.jpg",
           ],
           innerDetails: [
             {
@@ -1015,12 +1010,12 @@ const BedframeCard = () => {
           capacity_twin: 400,
           capacity_double: 500,
           image: [
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754143498/2342E_WEB_3_znknnh.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754143493/2342E_WEB_2_wp60z6.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754143488/2342E_WEB_1_wmcauo.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754143484/2342w_WEB_3_xfv212.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754143480/2342W_WEB_1_rvhpnr.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754143475/2342W_WEB_2_ndjj5o.jpg",
+            "/all-images/2342E_WEB_3.jpg",
+            "/all-images/2342E_WEB_2.jpg",
+            "/all-images/2342E_WEB_1.jpg",
+            "/all-images/2342w_WEB_3.jpg",
+            "/all-images/2342W_WEB_1.jpg",
+            "/all-images/2342W_WEB_2.jpg",
           ],
           innerDetails: [
             {
@@ -1075,10 +1070,10 @@ const BedframeCard = () => {
           capacity_queen: 600,
           capacity_king: 650,
           image: [
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754143692/T2175B_WEB_2_jjx7hk.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754143687/T2175GF_WEB_2_mq492q.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754143680/T2175W_WEB_2_rjwoar.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754143675/T2175GL_WEB_2_fool59.jpg",
+            "/all-images/T2175B_WEB_2.jpg",
+            "/all-images/T2175GF_WEB_2.jpg",
+            "/all-images/T2175W_WEB_2.jpg",
+            "/all-images/T2175GL_WEB_2.jpg",
           ],
           innerDetails: [
             {
@@ -1194,10 +1189,10 @@ const BedframeCard = () => {
           capacity_queen: 650,
           capacity_king: 700,
           image: [
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754143808/2380GR_WEB_icgwzh.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754143803/2380BK_WEB_heqzac.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754143797/2380BL_WEB_lz6677.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754143792/2380WH_WEB_fcqlov.jpg",
+            "/all-images/2380GR_WEB.jpg",
+            "/all-images/2380BK_WEB.jpg",
+            "/all-images/2380BL_WEB.jpg",
+            "/all-images/2380WH_WEB.jpg",
           ],
           innerDetails: [
             {
@@ -1323,10 +1318,7 @@ const BedframeCard = () => {
             "Elevate Your Bedroom with our Modern Metal Bed Frame Discover a combination of style, durability, and convenience with our Modern Metal Bed Frame. This versatile bed frame is designed to enhance your bedroom, and here are five important features that make it a standout choice: Sturdy Metal Frame: Crafted from high-quality metal, this bed frame provides unwavering support and stability. It’s built to last, ensuring you can enjoy restful nights of sleep for years to come. Metal Slats for Support: Say goodbye to the hassle of traditional box springs. Our bed frame includes metal slats that offer excellent support to your mattress. This not only streamlines your setup but also provides extra comfort. Centre Support: We’ve designed this bed frame with a central support system, ensuring that your mattress remains evenly and securely in place. It’s a thoughtful addition for a good night’s sleep. No Box Spring Required: Embrace a more modern and uncluttered bedroom aesthetic. With our bed frame, you can skip the traditional box spring. Enjoy a cleaner, sleeker look while still receiving the support you need. Versatile for Any Room: This bed frame is perfect for various settings. Whether it’s a kid’s room, guest room, or your own space, its contemporary design seamlessly fits into any bedroom decor. Invest in your bedroom’s style and comfort with our Modern Metal Bed Frame. The sturdy metal frame, support slats, and no-box spring-needed design offer both convenience and long-lasting value. It’s the perfect choice to elevate your bedroom without breaking the bank. Weight Capacity: 400 lbs",
           assembly_instruction: "pdf file link",
           capacity_twin: 550,
-          image: [
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754142794/T2400Web_kjnuga.png",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754145066/Drawers_WEB_2_gqhvap.png",
-          ],
+          image: ["/all-images/T2400Web.png", "/all-images/Drawers_WEB_2.png"],
           innerDetails: [
             {
               material: "Metal",
@@ -1353,9 +1345,9 @@ const BedframeCard = () => {
           capacity_queen: 650,
           capacity_king: 700,
           image: [
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754145320/T2430_WEB_2_lyrupa.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754145314/2430_WEB_3_iqwvb4.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754145310/2430_WEB_2_lxgckk.jpg",
+            "/all-images/T2430_WEB_2.jpg",
+            "/all-images/2430_WEB_3.jpg",
+            "/all-images/2430_WEB_2.jpg",
           ],
           innerDetails: [
             {
@@ -1401,8 +1393,8 @@ const BedframeCard = () => {
           capacity_twin: 400,
           capacity_double: 550,
           capacity_queen: 650,
-          
-          image: ["https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754145794/2425_web2_rsmrkj.jpg","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754145798/2425_web1_vyqwia.jpg"],
+
+          image: ["/all-images/2425_web2.jpg", "/all-images/2425_web1.jpg"],
           innerDetails: [
             {
               material: "METAL",
@@ -1429,7 +1421,6 @@ const BedframeCard = () => {
                   length: '83"',
                   height: '12"',
                 },
-                
               ],
             },
           ],
@@ -1443,7 +1434,15 @@ const BedframeCard = () => {
           capacity_double: 750,
           capacity_queen: 850,
           capacity_king: 950,
-          image: ["https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754145977/T2450_2_WEB_fiw9lo.jpg","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754145984/T2450_8_WEB_czxa5k.jpg","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754145970/T2450_3_WEB_mec6s7.jpg","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754145965/T2450_4_WEB_w386tw.jpg","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754145959/T2450_5_WEB_minhyw.jpg","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754145954/T2450_6_WEB_fixfh2.jpg","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754145946/T2450_7_WEB_phvfhd.jpg"],
+          image: [
+            "/all-images/T2450_2_WEB.jpg",
+            "/all-images/T2450_8_WEB.jpg",
+            "/all-images/T2450_3_WEB.jpg",
+            "/all-images/T2450_4_WEB.jpg",
+            "/all-images/T2450_5_WEB.jpg",
+            "/all-images/T2450_6_WEB.jpg",
+            "/all-images/T2450_7_WEB.jpg",
+          ],
           innerDetails: [
             {
               material: "Metal",
@@ -1495,7 +1494,12 @@ const BedframeCard = () => {
           assembly_instruction: "pdf file link",
           capacity_top: 200,
           capacity_bottom: 250,
-          image: ["https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754146227/T210E_WEB-scaled_jvrsjh.jpg","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754146221/T210G_WEB-scaled_lqxmvq.jpg","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754146215/T210W_WEB-scaled_vfklob.jpg","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754146200/960_961_WEB_am5iex.jpg"],
+          image: [
+            "/all-images/T210E_WEB-scaled.jpg",
+            "/all-images/T210G_WEB-scaled.jpg",
+            "/all-images/T210W_WEB-scaled.jpg",
+            "/all-images/960_961_WEB.jpg",
+          ],
           innerDetails: [
             {
               material: "Wood",
@@ -1545,7 +1549,11 @@ const BedframeCard = () => {
           assembly_instruction: "pdf file link",
           capacity_top: 200,
           capacity_bottom: 350,
-          image: ["https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754146424/2830G_WEB_v8zoa8.jpg","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754146430/2830W_WEB_gc9gfn.jpg","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754146424/2830G_WEB_v8zoa8.jpg"],
+          image: [
+            "/all-images/2830G_WEB.jpg",
+            "/all-images/2830W_WEB.jpg",
+            "/all-images/2830G_WEB.jpg",
+          ],
           innerDetails: [
             {
               material: "Metal",
@@ -1595,7 +1603,21 @@ const BedframeCard = () => {
           assembly_instruction: "pdf file link",
           capacity_top: 200,
           capacity_bottom: 350,
-          image: ["https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754146721/T2700GWeb_xetaxm.png","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754146713/2700H_WEB_hsgwck.jpg","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754146706/2700_WHITE_WEB_y6d285.jpg","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754146699/2700E_WEB_1_cwunog.jpg","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754146692/2700W_WEB_2_2_ojod9u.jpg","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754146685/2700E_WEB_2_1_spu97p.jpg","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754146678/2700E_WEB_2_2_sjdl04.jpg","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754146672/2700E_WEB_2_3_vf0qcr.jpg","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754146665/2700G_WEB_2_1_mnduh9.jpg","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754146659/2700G_WEB_2_2_ishfcb.jpg","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754146650/2700H_WEB_2_1_n4ipfz.jpg","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754146643/2700H_WEB_2_2_sgnry5.jpg","https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754146636/2700W_WEB_2_1_bmfmyr.jpg"],
+          image: [
+            "/all-images/T2700GWeb.png",
+            "/all-images/2700H_WEB.jpg",
+            "/all-images/2700_WHITE_WEB.jpg",
+            "/all-images/2700E_WEB_1.jpg",
+            "/all-images/2700W_WEB_2_2.jpg",
+            "/all-images/2700E_WEB_2_1.jpg",
+            "/all-images/2700E_WEB_2_2.jpg",
+            "/all-images/2700E_WEB_2_3.jpg",
+            "/all-images/2700G_WEB_2_1.jpg",
+            "/all-images/2700G_WEB_2_2.jpg",
+            "/all-images/2700H_WEB_2_1.jpg",
+            "/all-images/2700H_WEB_2_2.jpg",
+            "/all-images/2700W_WEB_2_1.jpg",
+          ],
           innerDetails: [
             {
               material: "Wood",
@@ -1654,7 +1676,7 @@ const BedframeCard = () => {
       ],
     },
   ];
-  const rendering=0
+  const rendering = 0;
   return (
     <div className="mt-20">
       {BedframesData.map((BedframesData, index) => (
@@ -1676,7 +1698,10 @@ const BedframeCard = () => {
           {/* //////////displaying card for categories */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-10 mb-10">
             {BedframesData.details.map((detail) => (
-              <div className="bg-gray-100 p-6 rounded-lg text-center hover:shadow-lg transition" key={detail.name}>
+              <div
+                className="bg-gray-100 p-6 rounded-lg text-center hover:shadow-lg transition"
+                key={detail.name}
+              >
                 <ImageSlider images={detail.image} rendering={rendering} />
                 <Link to={`${detail.name}`} state={{ detail }}>
                   <h3 className="font-bold text-lg mb-2">{detail.name}</h3>

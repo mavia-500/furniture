@@ -10,7 +10,7 @@ const PrivacyPolicy = () => {
 
         <div className="space-y-6 text-gray-700 leading-relaxed text-base md:text-lg">
           <p>
-            This privacy policy applies to hilyah.ca and all other websites,
+            This privacy policy applies to hilyah.life and all other websites,
             affiliates or products owned by Hilyah Canada. This privacy policy
             explains how we may collect, use or disclose your personal
             information which we would request during the purchase of our
