@@ -26,12 +26,12 @@ const BedframeCard = () => {
           capacity_queen: 500,
           capacity_king: 650,
           image: [
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754136430/h2125_spxvv7.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754136429/h2125_3_vzlhom.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754136428/h2125_4_dzmdwv.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754136428/h2125_2_di911e.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754136428/h2125_5_z4g9kw.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754136427/h2125_7_vceioe.jpg",
+            "/all-images/h2125.jpg",
+            "/all-images/h2125(3).jpg",
+            "/all-images/h2125(4).jpg",
+            "/all-images/h2125(2).jpg",
+            "/all-images/h2125(5).jpg",
+            "/all-images/h2125(7).jpg",
           ],
           innerDetails: [
             {

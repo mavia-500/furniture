@@ -207,11 +207,11 @@ const MattressCard = () => {
 
   `,
           image: [
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754301554/0001605_oasis-luxury-mattress-set_1000_b3u18b.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754301556/0001606_oasis-luxury-mattress-set_1000_u5s3z6.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754301879/0001607_oasis-luxury-mattress_1000_ewnjhm.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754301550/20250417165455_madeincanada_svjwet.jpg",
-            "https://res.cloudinary.com/dkbyjjnw5/image/upload/v1754301551/20250401133210_img_4190_i1gdf7.jpg",
+            "/all-images/0001605_oasis-luxury-mattress-set_1000.jpeg",
+            "/all-images/0001606_oasis-luxury-mattress-set_1000.jpeg",
+            "/all-images/0001607_oasis-luxury-mattress_1000.jpeg",
+            "/all-images/20250417165455_madeincanada.jpg",
+            "/all-images/20250401133210_img_4190.jpeg",
           ],
           innerDetails: [
             {
