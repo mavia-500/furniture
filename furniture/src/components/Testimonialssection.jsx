@@ -512,7 +512,7 @@ export default function TestimonialsSection() {
             className="flex flex-col gap-1.5"
           >
             <span className="font-serif text-3xl font-light text-[#C8A96E] leading-none">
-              {s.value}
+              5000
             </span>
 
             <span className="font-sans text-[11px] font-medium tracking-[2px] uppercase text-[#9A8A70]">
