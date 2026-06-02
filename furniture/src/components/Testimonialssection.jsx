@@ -495,7 +495,7 @@ export default function TestimonialsSection() {
       <div className="flex justify-center gap-16 border-t border-[#E8DCC8] pt-10">
         {[
           {
-            value: `${testimonials.length}+`,
+            value: `5000+`,
             label: "Happy Customers",
           },
           {
@@ -512,7 +512,7 @@ export default function TestimonialsSection() {
             className="flex flex-col gap-1.5"
           >
             <span className="font-serif text-3xl font-light text-[#C8A96E] leading-none">
-              5000
+              {s.value}
             </span>
 
             <span className="font-sans text-[11px] font-medium tracking-[2px] uppercase text-[#9A8A70]">
