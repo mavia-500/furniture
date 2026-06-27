@@ -122,7 +122,7 @@ const CheckOut = () => {
           {/* Shipping Method */}
           <div>
             <h3 className="text-lg font-semibold mb-2">Shipping Method</h3>
-            <span className="ml-2">Standard (1–2 days) — $20–$50-Same day delivery also avaliable</span>
+            <span className="ml-2">Standard (1–2 days) -Same day delivery also avaliable</span>
           </div>
 
           {/* Payment Method */}
